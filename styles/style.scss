@@ -1,0 +1,18 @@
+//Base
+@import "base/reset";
+// Utilidades
+@import "utilidades/mixin";
+@import "utilidades/variables";
+@import "utilidades/modo-oscuro";
+// Componentes
+@import "componentes/header";
+@import "componentes/nav";
+@import "componentes/formularios";
+@import "componentes/seccion-principal";
+@import "componentes/tarjetas";
+@import "componentes/seccion-descripcion";
+@import "componentes/footer";
+
+
+
+a img{width: 60px;}
