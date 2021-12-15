@@ -4,17 +4,15 @@ body {
 }
 
 header {
-  width: 100%;
+  position: fixed;
+  top: 50px;
 }
-
-.imagen-header {
+header .imagen-header {
   height: 600px;
   overflow: hidden;
 }
-.imagen-header img {
-  position: relative;
-  right: 500px;
-  bottom: 130px;
+header .imagen-header img {
+  width: 100%;
 }
 
 nav {
@@ -24,14 +22,13 @@ nav {
   height: 80px;
   z-index: 1;
 }
-
-.logo {
+nav .logo {
   height: 90%;
   margin: 5px;
 }
 
 body {
-  background-image: url(/imagenes/fondo.png);
+  background-image: url(/Brawl-Stars/imagenes/fondo.png);
   height: 120vh;
 }
 

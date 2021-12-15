@@ -1,12 +1,9 @@
 header{
-width: 100%;
-
-}
-
-.imagen-header{
+    position:fixed;
+    top:50px;
+    .imagen-header{
     height: 600px;
-overflow: hidden;
-img{position: relative;
-right:500px;
-bottom: 130px;}
+    overflow: hidden;
+img{width: 100%;}
+}
 }
