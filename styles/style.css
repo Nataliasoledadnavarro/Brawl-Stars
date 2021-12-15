@@ -1,5 +1,38 @@
-a img {
-  width: 60px;
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+}
+
+.imagen-header {
+  height: 600px;
+  overflow: hidden;
+}
+.imagen-header img {
+  position: relative;
+  right: 500px;
+  bottom: 130px;
+}
+
+nav {
+  position: fixed;
+  background-color: #312f2f;
+  width: 100%;
+  height: 80px;
+  z-index: 1;
+}
+
+.logo {
+  height: 90%;
+  margin: 5px;
+}
+
+body {
+  background-image: url(/imagenes/fondo.png);
+  height: 120vh;
 }
 
 /*# sourceMappingURL=style.css.map */
