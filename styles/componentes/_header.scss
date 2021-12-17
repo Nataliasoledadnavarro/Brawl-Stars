@@ -1,9 +1,12 @@
-header{
-    position:fixed;
-    top:50px;
-    .imagen-header{
-    height: 600px;
-    overflow: hidden;
-img{width: 100%;}
-}
+header {
+  height: 400px;
+
+  overflow: hidden;
+  .imagen-header {
+
+    img {
+      width: 100%;
+
+    }
+  }
 }

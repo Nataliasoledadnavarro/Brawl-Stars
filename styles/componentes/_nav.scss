@@ -1,19 +1,18 @@
 nav {
-  position: fixed;
   background-color: $fondo-negro;
   width: 100%;
   height: 80px;
-  z-index: 1;
-  .logo{
-    height: 90%;
-    margin: 5px;
+  display: flex;
+
+
+  .logo {
+width: 120px;
+    display: flex;
+
+ align-items: center;
+  }
+  img {
+    width: 100%;
+  }
 }
-}
-
-
-
-
-
-
-
 
