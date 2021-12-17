@@ -27,14 +27,14 @@ nav img {
 }
 
 .seccion-principal-brawlers {
-  background-color: yellow;
   display: flex;
   align-items: center;
+  background-color: transparent;
 }
 .seccion-principal-brawlers .contenedor-tarjetas-brawlers {
   display: flex;
   flex-wrap: wrap;
-  margin: 5%;
+  background-color: transparent;
 }
 
 .tarjeta-brawler {
@@ -52,8 +52,8 @@ nav img {
 }
 
 body {
-  background-image: url(/imagenes/fondo.png);
   height: 180vh;
+  background-color: aqua;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,10 +1,11 @@
 .seccion-principal-brawlers {
-  background-color: yellow;
   display: flex;
   align-items: center;
+  background-color: transparent;
   .contenedor-tarjetas-brawlers {
     display: flex;
     flex-wrap: wrap;
+    background-color: transparent;
   }
 }
 // corregir para que quede centrado el contenedor
