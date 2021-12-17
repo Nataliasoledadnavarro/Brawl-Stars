@@ -52,8 +52,8 @@ nav img {
 }
 
 body {
+  background-image: url(/imagenes/fondo.png);
   height: 180vh;
-  background-color: aqua;
 }
 
 /*# sourceMappingURL=style.css.map */
