@@ -1,0 +1,14 @@
+.tarjeta-brawler {
+  width: 200px;
+  margin: 20px;
+  background-color: black;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  h3 {
+    color: white;
+    margin-left: 10px;
+    font-family: $font-titulo;
+    font-size: 20px;
+    letter-spacing:2px;
+  }
+}
