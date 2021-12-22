@@ -32,11 +32,17 @@ nav img {
 .seccion-principal-brawlers {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .seccion-principal-brawlers .contenedor-tarjetas-brawlers {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.ocultar {
+  display: none;
 }
 
 .tarjeta-brawler {
