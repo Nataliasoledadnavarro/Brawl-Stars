@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles/style.css" />
-  <!--Fonts-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
+    <title>Buscador de Brawl Stars</title>
+  </head>
 
-  <title>Buscador de Brawl Stars</title>
-</head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="imagenes/Brawl-Stars-logo.png" alt="Logo Brawl Stars" />
+      </div>
+    </nav>
+    <header>
+      <div class="imagen-header">
+        <img
+          src="imagenes/principal.jpg"
+          alt="Grupo de personajes de Brawl Stars"
+        />
+      </div>
+    </header>
 
-<body>
-  <nav>
-    <div class="logo">
-      <img src="imagenes/Brawl-Stars-logo.png" alt="Logo Brawl Stars" />
-    </div>
-  </nav>
-  <header>
-    <div class="imagen-header">
-      <img src="imagenes/principal.jpg" alt="Grupo de personajes de Brawl Stars" />
-    </div>
-  </header>
+    <section class="seccion-principal-brawlers">
+      <div class="contenedor-tarjetas-brawlers"></div>
+    </section>
 
-  <section class="seccion-principal-brawlers">
-    <div class="contenedor-tarjetas-brawlers"></div>
+    <section class="paginado">
+      <button>Primera página</button>
+      <button>Página anterior</button>
+      <button>Próxima página</button>
+      <button>Última página</button>
+    </section>
 
-  </section>
-
-  <script src="index.js"></script>
-</body>
-
+    <script src="index.js"></script>
+  </body>
 </html>
