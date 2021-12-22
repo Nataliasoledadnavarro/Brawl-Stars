@@ -30,17 +30,24 @@
         />
       </div>
     </header>
-
+<form id="formulario-busqueda">
+  <label for="input-busqueda"> ¡Ingresa el nombre y encontrá tu Brawler!
+    <input type="text" id="input-busqueda">
+  </label>
+  <button id="boton-buscar">Buscar</button>
+</form>
+<section id="seccion-busqueda"></section>
     <section class="seccion-principal-brawlers">
       <div class="contenedor-tarjetas-brawlers"></div>
+      <div class="paginado">
+        <button id="boton-primera-pagina">Primera página</button>
+        <button id="boton-pagina-anterior">Página anterior</button>
+        <button id="boton-proxima-pagina">Próxima página</button>
+        <button id="boton-ultima-pagina">Última página</button>
+      </div>
     </section>
 
-    <section class="paginado">
-      <button id="boton-primera-pagina">Primera página</button>
-      <button id="boton-pagina-anterior">Página anterior</button>
-      <button id="boton-proxima-pagina">Próxima página</button>
-      <button id="boton-ultima-pagina">Última página</button>
-    </section>
+    
 
     <script src="index.js"></script>
   </body>
