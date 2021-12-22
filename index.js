@@ -13,8 +13,11 @@ const traerBrawlers = () => {
 
 traerBrawlers();
 
+
+
 const tarjetasBrawlersHtml = (data) => {
-  const html = data.list.reduce((acc, curr) => {
+  let nuevaData = data.list.slice(0,10)
+  const html = nuevaData.reduce((acc, curr) => {
     return (
       acc +
       `<article class="tarjeta-brawler" data.id=${curr.id}>

@@ -7,6 +7,9 @@ header {
   height: 400px;
   overflow: hidden;
 }
+header .imagen-header {
+  object-fit: cover;
+}
 header .imagen-header img {
   width: 100%;
 }
@@ -28,13 +31,12 @@ nav img {
 
 .seccion-principal-brawlers {
   display: flex;
-  align-items: center;
-  background-color: transparent;
+  justify-content: center;
 }
 .seccion-principal-brawlers .contenedor-tarjetas-brawlers {
   display: flex;
   flex-wrap: wrap;
-  background-color: transparent;
+  justify-content: center;
 }
 
 .tarjeta-brawler {
