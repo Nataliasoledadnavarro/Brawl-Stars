@@ -53,6 +53,15 @@ nav img {
   letter-spacing: 2px;
 }
 
+.paginado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.paginado button {
+  margin-left: 20px;
+}
+
 body {
   background-image: url(/imagenes/fondo.png);
   height: 180vh;
