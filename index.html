@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--CSS-->
     <link rel="stylesheet" href="styles/style.css" />
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
     <link
-      href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Roboto:ital,wght@0,300;1,100&display=swap"
       rel="stylesheet"
     />
 
@@ -30,13 +32,13 @@
         />
       </div>
     </header>
-<form id="formulario-busqueda">
-  <label for="input-busqueda"> ¡Ingresa el nombre y encontrá tu Brawler!
-    <input type="text" id="input-busqueda">
-  </label>
-  <button id="boton-buscar">Buscar</button>
-</form>
-<section id="seccion-busqueda"></section>
+    <form id="formulario-busqueda">
+      <!--<label for="input-busqueda" class="label-busqueda">
+        ¡Ingresá el nombre y encontrá tu Brawler!</label>-->
+       <input type="text" id="input-busqueda"  placeholder=" ¡Ingresá el nombre y encontrá tu Brawler!"/>
+          <button id="boton-buscar">Buscar</button>
+    </form>
+    <section id="seccion-busqueda"></section>
     <section class="seccion-principal-brawlers">
       <div class="contenedor-tarjetas-brawlers"></div>
       <div class="paginado">
@@ -46,8 +48,6 @@
         <button id="boton-ultima-pagina">Última página</button>
       </div>
     </section>
-
-    
 
     <script src="index.js"></script>
   </body>

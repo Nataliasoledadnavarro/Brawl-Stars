@@ -17,5 +17,9 @@
 
 body {
   background-image: url(/imagenes/fondo.png);
-  height: 180vh;
+  font-family: $font-textos-generales;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
 }
