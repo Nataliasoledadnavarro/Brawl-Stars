@@ -1,0 +1,27 @@
+@mixin boton($width:90px, $height:33px) {
+  width: $width;
+  height: $height;
+  font-family: $font-textos-generales;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  border: none;
+  padding: 5px;
+  border-radius: 2px;
+  background-image: linear-gradient(
+    to right,
+    #444444 0%,
+    #8d8f91 51%,
+    #505152 100%
+  );
+}
+
+@mixin boton-hover {
+  background-image: linear-gradient(
+    to right,
+    #bebdbd 0%,
+    #8d8f91 51%,
+    #bebdbd 100%
+  );
+}

@@ -4,11 +4,9 @@ body {
 }
 
 header {
-  height: 400px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   overflow: hidden;
-}
-header .imagen-header {
-  object-fit: cover;
 }
 header .imagen-header img {
   width: 100%;
@@ -30,6 +28,7 @@ nav img {
 }
 
 .seccion-principal-brawlers {
+  max-width: 1300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,22 +40,25 @@ nav img {
   justify-content: center;
 }
 
-.ocultar {
-  display: none;
-}
-
 .tarjeta-brawler {
   width: 200px;
   margin: 20px;
   background-color: black;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transition: all 0.25s;
 }
 .tarjeta-brawler h3 {
   color: white;
-  margin-left: 10px;
-  font-family: "Bakbak One", cursive;
-  font-size: 20px;
-  letter-spacing: 2px;
+  margin: 15px;
+  font-weight: 600;
+  font-family: "Teko", sans-serif;
+  font-size: 32px;
+  letter-spacing: 3px;
+}
+
+.tarjeta-brawler :hover {
+  transform: translateY(-15px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .paginado {
@@ -68,9 +70,57 @@ nav img {
   margin-left: 20px;
 }
 
+#formulario-busqueda {
+  width: 70%;
+  height: 150px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#formulario-busqueda label {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  text-shadow: 1px 1px 1px #000;
+}
+#formulario-busqueda input {
+  border: none;
+  background: transparent;
+  border-bottom: solid 1px #706f6f;
+  height: 30px;
+  width: 70%;
+}
+#formulario-busqueda input::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #312f2f;
+}
+#formulario-busqueda button {
+  width: 15%;
+  height: 33px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  border: none;
+  padding: 5px;
+  border-radius: 2px;
+  background-image: linear-gradient(to right, #444444 0%, #8d8f91 51%, #505152 100%);
+}
+#formulario-busqueda button:hover {
+  background-image: linear-gradient(to right, #bebdbd 0%, #8d8f91 51%, #bebdbd 100%);
+}
+
 body {
   background-image: url(/imagenes/fondo.png);
-  height: 180vh;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

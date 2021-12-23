@@ -1,0 +1,35 @@
+#formulario-busqueda {
+  width: 70%;
+  height: 150px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  label {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    text-shadow: 1px 1px 1px #000;
+  }
+
+  input {
+    border: none;
+    background: transparent;
+    border-bottom: solid 1px $gris;
+    height: 30px;
+    width: 70%;
+  }
+  input::placeholder {
+    font-family: $font-textos-generales;
+    font-size: 18px;
+    font-weight: 800;
+    color: $negro;
+  }
+  button {
+    @include boton($width: 15%);
+  }
+  button:hover {
+    @include boton-hover;
+  }
+}

@@ -1,9 +1,11 @@
 header {
-  height: 400px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  //height: 400px;
   overflow: hidden;
-
   .imagen-header {
-    object-fit: cover;
+   
+    //height: 300px;
     img {
       width: 100%;
     }
