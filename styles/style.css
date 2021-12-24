@@ -193,5 +193,57 @@ nav #boton-nav-brawlers {
     font-size: 14px;
   }
 }
+#contenedor-modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.541);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+#contenedor-modal #modal-busqueda {
+  width: 300px;
+  height: 350px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background: white;
+}
+#contenedor-modal #modal-busqueda .contenedor-img-busqueda {
+  width: 300px;
+  overflow: hidden;
+}
+#contenedor-modal #modal-busqueda .contenedor-img-busqueda img {
+  width: 100%;
+}
+#contenedor-modal #modal-busqueda h2 {
+  font-family: "Teko", sans-serif;
+  text-align: center;
+  font-size: 32px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+#contenedor-modal #modal-busqueda p {
+  width: 90%;
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-size: 14px;
+}
+#contenedor-modal #modal-busqueda .subtitulo {
+  font-weight: 900;
+  font-size: 16px;
+}
+#contenedor-modal #modal-busqueda #cerrar-modal {
+  position: relative;
+  bottom: 330px;
+  left: 270px;
+  border: none;
+  background-color: transparent;
+}
+#contenedor-modal #modal-busqueda #cerrar-modal i {
+  font-size: 18px;
+  color: #706f6f;
+}
 
 /*# sourceMappingURL=style.css.map */
