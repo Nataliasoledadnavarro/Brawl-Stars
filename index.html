@@ -23,8 +23,8 @@
     <div class="logo">
       <img src="imagenes/Brawl-Stars-logo.png" alt="Logo Brawl Stars" />
     </div>
-   <button id="boton-nav-brawlers">Brawlers</button></li>
-  
+    <button id="boton-nav-brawlers">Brawlers</button></li>
+
   </nav>
   <header aria-label="Grupo de personajes de Brawl Stars"></header>
   <form id="formulario-busqueda">
@@ -33,7 +33,19 @@
     <input type="text" id="input-busqueda" placeholder=" ¡Ingresá el nombre y encontrá tu Brawler!" />
     <button id="boton-buscar">Buscar</button>
   </form>
-  <section id="seccion-busqueda"></section>
+  <div id="contenedor-modal" class="ocultar">
+    <div id="modal-busqueda">
+      <div class="contenedor-img-busqueda"><img src="imagenes/busqueda.jpg" alt="Brawler Carl"></div>
+      <h2>Brawler no encontrado</h2>
+      <p class="subtitulo">¡Intentalo de nuevo!</p>
+      <p>Si continúa sin aparecer es porque estamos trabajando en la actualización.</p>
+      <button id="cerrar-modal" aria-label="Boton cerrar"><i class="fas fa-times"></i></button>
+    </div>
+  </div>
+
+  <section id="seccion-busqueda">
+  </section>
+
   <section class="seccion-principal-brawlers">
     <div class="contenedor-tarjetas-brawlers"></div>
     <div class="paginado">

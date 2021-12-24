@@ -20,6 +20,10 @@ const botonBuscar = document.getElementById("boton-buscar");
 const seccionBusqueda = document.getElementById("seccion-busqueda");
 const formularioBusqueda = document.getElementById("formulario-busqueda");
 
+//Modal
+const contenedorModalBusqueda = document.getElementById("contenedor-modal")
+const botonCerrarModal = document.getElementById("cerrar-modal")
+
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////
                                            MAQUETADO
 ///////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -135,7 +139,7 @@ const mostrarBusqueda = () => {
         seccionBusqueda.innerHTML = mostrarRestultado;
         inputBusqueda.value = ""
       } else {
-        alert("Brawler no encontrado!");
+        contenedorModalBusqueda.style.display = "flex"
       }
     });
 };
@@ -145,4 +149,8 @@ formularioBusqueda.onsubmit = (event) => {
   mostrarBusqueda();
 };
 
-// agregar modal de brawler no encontrado.
+botonCerrarModal.onclick = () =>{
+  contenedorModalBusqueda.style.display = "none"
+  mostrarSeccion(arraySecciones,seccionPrincipal)
+}
+
