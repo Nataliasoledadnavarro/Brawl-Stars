@@ -1,13 +1,9 @@
 header {
   width: 100%;
+  height: 500px;
+  max-width: $max-whidth + 200;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  //height: 400px;
-  overflow: hidden;
-  .imagen-header {
-   
-    //height: 300px;
-    img {
-      width: 100%;
-    }
-  }
+  background-image: url("/imagenes/principal.jpg");
+  background-size: cover;
+  background-position: center;
 }
