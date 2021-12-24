@@ -1,3 +1,6 @@
+// Nav
+const botonNavBrawlers = document.getElementById("boton-nav-brawlers");
+
 //Sección Principal
 const seccionPrincipal = document.querySelector(".seccion-principal-brawlers");
 console.log(seccionPrincipal);
@@ -17,6 +20,35 @@ const botonBuscar = document.getElementById("boton-buscar");
 const seccionBusqueda = document.getElementById("seccion-busqueda");
 const formularioBusqueda = document.getElementById("formulario-busqueda");
 
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////
+                                           MAQUETADO
+///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+const arraySecciones = [
+  seccionPrincipal,
+  seccionBusqueda,
+  //seccionDescripción,
+];
+
+const mostrarSeccion = (array, seccion) => {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] != seccion) {
+      array[i].style.display = "none";
+    } else if (array[i] === seccion) {
+      array[i].style.display = "flex";
+    }
+  }
+};
+
+// NAV
+botonNavBrawlers.onclick = (e) =>{
+  e.preventDefault()
+  mostrarSeccion(arraySecciones,seccionPrincipal)
+}
+
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                  FETCH PSINCIPAL
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 const traerBrawlers = () => {
   fetch(`https://api.brawlapi.com/v1/brawlers`)
     .then((res) => res.json())
@@ -26,6 +58,10 @@ const traerBrawlers = () => {
 };
 
 traerBrawlers();
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                  PAGINADO
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 let paginaActual = 0;
 
@@ -57,7 +93,7 @@ botonPrimeraPagina.onclick = () => {
 
 botonPaginaAnterior.onclick = () => {
   if (paginaActual === 0) {
-  prev.disabled = true;
+    prev.disabled = true;
   }
 
   paginaActual = paginaActual - 10;
@@ -95,8 +131,9 @@ const mostrarBusqueda = () => {
       <img src="${resultado.imageUrl}" alt="Imagen del brawler ${resultado.name}">
       <h3>${resultado.name}</h3>
       </article>`;
-        seccionPrincipal.style.display = "none";
+        mostrarSeccion(arraySecciones,seccionBusqueda)
         seccionBusqueda.innerHTML = mostrarRestultado;
+        inputBusqueda.value = ""
       } else {
         alert("Brawler no encontrado!");
       }

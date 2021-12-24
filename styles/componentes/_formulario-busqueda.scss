@@ -5,31 +5,48 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  label {
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 20px;
-    margin-left: 15px;
-    text-shadow: 1px 1px 1px #000;
-  }
 
-  input {
+  #input-busqueda {
+    width: 70%;
+    height: 30px;
     border: none;
     background: transparent;
     border-bottom: solid 1px $gris;
-    height: 30px;
-    width: 70%;
   }
-  input::placeholder {
+  #input-busqueda::placeholder {
     font-family: $font-textos-generales;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 800;
     color: $negro;
   }
-  button {
+  #boton-buscar {
     @include boton($width: 15%);
   }
-  button:hover {
+  #boton-buscar:hover {
     @include boton-hover;
   }
+}
+
+@media screen and (max-width: 800px) {
+  #formulario-busqueda {
+    width: 95%;
+    #boton-buscar {
+      @include boton($width: 12%);
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  #formulario-busqueda {
+    flex-direction: column;
+    #input-busqueda {
+      width: 90%;
+    }
+    #boton-buscar {
+      @include boton($width: 30%);
+    }
+    #input-busqueda::placeholder {
+      font-size: 14px;
+    }
+  }
+  
 }

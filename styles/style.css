@@ -3,6 +3,17 @@ body {
   box-sizing: border-box;
 }
 
+body {
+  background-image: url(/imagenes/fondo.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 header {
   width: 100%;
   height: 500px;
@@ -18,14 +29,32 @@ nav {
   width: 100%;
   height: 80px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 nav .logo {
   width: 120px;
   display: flex;
   align-items: center;
+  margin-left: 10px;
 }
 nav img {
   width: 100%;
+}
+nav #boton-nav-brawlers {
+  margin-right: 40px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-family: "Teko", sans-serif;
+  font-size: 32px;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#boton-nav-brawlers:hover {
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 }
 
 .seccion-principal-brawlers {
@@ -94,27 +123,20 @@ nav img {
   justify-content: space-around;
   align-items: center;
 }
-#formulario-busqueda label {
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 20px;
-  margin-left: 15px;
-  text-shadow: 1px 1px 1px #000;
-}
-#formulario-busqueda input {
+#formulario-busqueda #input-busqueda {
+  width: 70%;
+  height: 30px;
   border: none;
   background: transparent;
   border-bottom: solid 1px #706f6f;
-  height: 30px;
-  width: 70%;
 }
-#formulario-busqueda input::placeholder {
+#formulario-busqueda #input-busqueda::placeholder {
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 800;
   color: #312f2f;
 }
-#formulario-busqueda button {
+#formulario-busqueda #boton-buscar {
   width: 15%;
   height: 33px;
   font-family: "Roboto", sans-serif;
@@ -126,20 +148,50 @@ nav img {
   border-radius: 5px;
   background-image: linear-gradient(#d60000 0%, #fc3737 51%, #fa8e8e 100%);
 }
-#formulario-busqueda button:hover {
+#formulario-busqueda #boton-buscar:hover {
   background: linear-gradient(#061efc 0%, #527ffc 51%, #9db2f8 100%);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-body {
-  background-image: url(/imagenes/fondo.png);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center top;
-  font-family: "Roboto", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@media screen and (max-width: 800px) {
+  #formulario-busqueda {
+    width: 95%;
+  }
+  #formulario-busqueda #boton-buscar {
+    width: 12%;
+    height: 33px;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(#d60000 0%, #fc3737 51%, #fa8e8e 100%);
+  }
+}
+@media screen and (max-width: 500px) {
+  #formulario-busqueda {
+    flex-direction: column;
+  }
+  #formulario-busqueda #input-busqueda {
+    width: 90%;
+  }
+  #formulario-busqueda #boton-buscar {
+    width: 30%;
+    height: 33px;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(#d60000 0%, #fc3737 51%, #fa8e8e 100%);
+  }
+  #formulario-busqueda #input-busqueda::placeholder {
+    font-size: 14px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
