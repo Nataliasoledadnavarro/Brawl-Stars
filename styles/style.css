@@ -5,11 +5,12 @@ body {
 
 header {
   width: 100%;
+  height: 500px;
+  max-width: 1500px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  overflow: hidden;
-}
-header .imagen-header img {
-  width: 100%;
+  background-image: url("/imagenes/principal.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 nav {
@@ -62,12 +63,27 @@ nav img {
 }
 
 .paginado {
+  width: 270px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  margin-top: 40px;
+  margin-bottom: 50px;
 }
 .paginado button {
-  margin-left: 20px;
+  width: 50px;
+  height: 33px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  background-image: linear-gradient(#d60000 0%, #fc3737 51%, #fa8e8e 100%);
+}
+.paginado button :hover {
+  color: blue;
 }
 
 #formulario-busqueda {
@@ -107,16 +123,19 @@ nav img {
   font-weight: 400;
   text-align: center;
   border: none;
-  padding: 5px;
-  border-radius: 2px;
-  background-image: linear-gradient(to right, #444444 0%, #8d8f91 51%, #505152 100%);
+  border-radius: 5px;
+  background-image: linear-gradient(#d60000 0%, #fc3737 51%, #fa8e8e 100%);
 }
 #formulario-busqueda button:hover {
-  background-image: linear-gradient(to right, #bebdbd 0%, #8d8f91 51%, #bebdbd 100%);
+  background: linear-gradient(#061efc 0%, #527ffc 51%, #9db2f8 100%);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 body {
   background-image: url(/imagenes/fondo.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;

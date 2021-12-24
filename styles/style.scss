@@ -17,9 +17,11 @@
 
 body {
   background-image: url(/imagenes/fondo.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
   font-family: $font-textos-generales;
   display: flex;
   flex-direction: column;
   align-items: center;
- 
 }

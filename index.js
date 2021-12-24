@@ -31,19 +31,19 @@ let paginaActual = 0;
 
 const tarjetasBrawlersHtml = (data, pagina) => {
   const arrayPaginado = data.list.slice(pagina, pagina + 10);
-
   if (arrayPaginado.length === 0) {
-    alert("no hay mas brawlers");
+    botonProximaPagina.prev.disabled = true;
     paginaActual = 0;
     traerBrawlers();
   }
+
   const html = arrayPaginado.reduce((acc, curr) => {
     return (
       acc +
       `<article class="tarjeta-brawler" data.id=${curr.id}>
-<img src="${curr.imageUrl}" alt="Imagen del brawler ${curr.name}">
-<h3>${curr.name}</h3>
-</article>`
+        <img src="${curr.imageUrl}" alt="Imagen del brawler ${curr.name}">
+          <h3>${curr.name}</h3>
+      </article>`
     );
   }, "");
 
@@ -56,11 +56,8 @@ botonPrimeraPagina.onclick = () => {
 };
 
 botonPaginaAnterior.onclick = () => {
-  if ((paginaActual = 0)) {
-    prev.disabled = true;
-  }
-  if ((paginaActual = 50)) {
-    prev.disabled = true;
+  if (paginaActual === 0) {
+  prev.disabled = true;
   }
 
   paginaActual = paginaActual - 10;
