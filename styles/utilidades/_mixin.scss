@@ -1,4 +1,4 @@
-@mixin boton($width:90px, $height:33px) {
+@mixin boton($width: 90px, $height: 33px) {
   width: $width;
   height: $height;
   font-family: $font-textos-generales;
@@ -7,21 +7,15 @@
   font-weight: 400;
   text-align: center;
   border: none;
-  padding: 5px;
-  border-radius: 2px;
+  border-radius: 5px;
   background-image: linear-gradient(
-    to right,
-    #444444 0%,
-    #8d8f91 51%,
-    #505152 100%
+    #d60000 0%,
+    #fc3737 51%,
+    #fa8e8e 100%
   );
 }
 
-@mixin boton-hover {
-  background-image: linear-gradient(
-    to right,
-    #bebdbd 0%,
-    #8d8f91 51%,
-    #bebdbd 100%
-  );
+@mixin boton-hover{
+  background: linear-gradient(#061efc 0%, #527ffc 51%, #9db2f8 100%);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
