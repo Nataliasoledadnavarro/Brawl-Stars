@@ -4,7 +4,7 @@ body {
 }
 
 body {
-  background-image: url("/imagenes/fondo.png");
+  background-image: url("../imagenes/fondo.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center top;
@@ -19,7 +19,7 @@ header {
   height: 500px;
   max-width: 1500px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  background-image: url("/imagenes/principal.jpg");
+  background-image: url(../imagenes/principal.jpg);
   background-size: cover;
   background-position: center;
 }
