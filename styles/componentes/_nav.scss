@@ -1,7 +1,8 @@
 nav {
-  background-color: $negro;
   width: 100%;
+  max-width: $max-whidth;
   height: 80px;
+  background-color: $negro;
   display: flex;
   justify-content: space-between;
   align-items: center;
