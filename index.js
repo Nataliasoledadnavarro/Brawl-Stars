@@ -1,9 +1,11 @@
 // Nav
+const nav = document.querySelector("nav")
 const botonNavBrawlers = document.getElementById("boton-nav-brawlers");
+//Header
+const header = document.querySelector("header")
 
 //Sección Principal
 const seccionPrincipal = document.querySelector(".seccion-principal-brawlers");
-console.log(seccionPrincipal);
 const contenedorBrawlers = document.querySelector(
   ".contenedor-tarjetas-brawlers"
 );
@@ -24,13 +26,17 @@ const formularioBusqueda = document.getElementById("formulario-busqueda");
 const contenedorModalBusqueda = document.getElementById("contenedor-modal")
 const botonCerrarModal = document.getElementById("cerrar-modal")
 
+// Sección descripción.
+const seccionDescripcion = document.getElementById("seccion-descripcion")
+
+
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////
                                            MAQUETADO
 ///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 const arraySecciones = [
   seccionPrincipal,
   seccionBusqueda,
-  //seccionDescripción,
+  seccionDescripcion,
 ];
 
 const mostrarSeccion = (array, seccion) => {
@@ -46,6 +52,9 @@ const mostrarSeccion = (array, seccion) => {
 // NAV
 botonNavBrawlers.onclick = (e) =>{
   e.preventDefault()
+  header.style.display = "block";
+  nav.style.display = "flex";
+  formularioBusqueda.style.display = "flex"
   mostrarSeccion(arraySecciones,seccionPrincipal)
 }
 
@@ -53,15 +62,16 @@ botonNavBrawlers.onclick = (e) =>{
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                                   FETCH PRINCIPAL
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-const traerBrawlers = () => {
+const mostrarBrawlers = () => {
   fetch(`https://api.brawlapi.com/v1/brawlers`)
     .then((res) => res.json())
     .then((data) => {
       tarjetasBrawlersHtml(data, paginaActual);
+      traerBrawler();
     });
 };
 
-traerBrawlers();
+mostrarBrawlers();
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                                   PAGINADO
@@ -74,13 +84,13 @@ const tarjetasBrawlersHtml = (data, pagina) => {
   if (arrayPaginado.length === 0) {
     botonProximaPagina.prev.disabled = true;
     paginaActual = 0;
-    traerBrawlers();
+    mostrarBrawlers();
   }
 
   const html = arrayPaginado.reduce((acc, curr) => {
     return (
       acc +
-      `<article class="tarjeta-brawler" data.id=${curr.id}>
+      `<article class="tarjeta-brawler" data-id=${curr.id}>
         <img src="${curr.imageUrl}" alt="Imagen del brawler ${curr.name}">
           <h3>${curr.name}</h3>
       </article>`
@@ -92,7 +102,7 @@ const tarjetasBrawlersHtml = (data, pagina) => {
 
 botonPrimeraPagina.onclick = () => {
   paginaActual = 0;
-  traerBrawlers();
+  mostrarBrawlers();
 };
 
 botonPaginaAnterior.onclick = () => {
@@ -101,17 +111,17 @@ botonPaginaAnterior.onclick = () => {
   }
 
   paginaActual = paginaActual - 10;
-  traerBrawlers();
+  mostrarBrawlers();
 };
 
 botonProximaPagina.onclick = () => {
   paginaActual = paginaActual + 10;
-  traerBrawlers();
+  mostrarBrawlers();
 };
 
 botonUltimaPagina.onclick = () => {
   paginaActual = 50;
-  traerBrawlers();
+  mostrarBrawlers();
 };
 // resolver ultima pagina por si agregan mas brawlers.
 
@@ -131,13 +141,14 @@ const mostrarBusqueda = () => {
         return objeto.name === capitalizar(inputBusqueda.value);
       });
       if (resultado != undefined) {
-        const mostrarRestultado = `<article class="tarjeta-brawler" data.id=${resultado.id}>
+        const mostrarRestultado = `<article class="tarjeta-brawler" data-id=${resultado.id}>
       <img src="${resultado.imageUrl}" alt="Imagen del brawler ${resultado.name}">
       <h3>${resultado.name}</h3>
       </article>`;
         mostrarSeccion(arraySecciones,seccionBusqueda)
         seccionBusqueda.innerHTML = mostrarRestultado;
         inputBusqueda.value = ""
+        traerBrawler()
       } else {
         contenedorModalBusqueda.style.display = "flex"
       }
@@ -152,5 +163,34 @@ formularioBusqueda.onsubmit = (event) => {
 botonCerrarModal.onclick = () =>{
   contenedorModalBusqueda.style.display = "none"
   mostrarSeccion(arraySecciones,seccionPrincipal)
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                            SECCIÓN DESCRIPCIÓN
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+const traerBrawler = () => {
+
+  const tarjetas = document.querySelectorAll(".tarjeta-brawler")
+
+  for (let i = 0; i < tarjetas.length; i++) {
+    tarjetas[i].onclick = () =>{
+      let id = tarjetas[i].dataset.id 
+      Number(id)
+      fetch(`https://api.brawlapi.com/v1/brawlers/${id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        mostrarDescripcion(data)
+      });
+    }
+  }  
+};
+
+
+const mostrarDescripcion = personaje => {
+header.style.display = "none"
+formularioBusqueda.style.display = "none"
+mostrarSeccion(arraySecciones,seccionDescripcion)
 }
 
