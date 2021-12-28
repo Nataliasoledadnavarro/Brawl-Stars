@@ -72,7 +72,7 @@ footer {
 
 @media screen and (max-width: 700px) {
   footer {
-    .body-footer {
+  .body-footer {
       flex-direction: column;
 
       .column-footer {
@@ -81,22 +81,30 @@ footer {
         flex-direction: column;
       }
     }
+    .colaboradores {
+      display: flex;
+      margin-bottom: 0%;
+      .tag {
+        @include tag-pequeño;
+        margin-right: 15px;
+      }
+    }
     .footer-footer {
-      flex-direction: column;
-      align-items: flex-start;
       ul {
-        width: 100%;
-        flex-direction: column;
+       width: 100%;
+       flex-direction: column;
         align-items: flex-start;
+        font-size: 14px;
         .tag {
-          margin-top: 10px;
+          @include tag-pequeño;
           margin-left: 0%;
+          margin-top: 5px;
         }
       }
     }
     .redes {
       li {
-        font-size: 12px;
+        font-size: 14px;
       }
     }
   }

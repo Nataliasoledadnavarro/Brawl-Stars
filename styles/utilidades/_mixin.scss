@@ -47,3 +47,32 @@
 
   }
 }
+
+@mixin tag-pequeño{
+  display: flex;
+  align-items: center;
+  width: 100px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: white;
+  color: $negro;
+  overflow: hidden;
+  font-size: 14px;
+  font-family: $font-textos-generales;
+  font-weight:800;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  img{
+      width: 30px;
+    padding: 5px;
+    background-image: linear-gradient(
+    #d60000 0%,
+    #fc3737 51%,
+    #fa8e8e 100%
+  );
+    border-top-left-radius:10px;
+    border-bottom-left-radius:10px;
+    margin-right: 3px;
+    
+
+  }
+}

@@ -219,21 +219,65 @@ footer .body-footer .column-footer h2 {
     display: flex;
     flex-direction: column;
   }
-  footer .footer-footer {
-    flex-direction: column;
-    align-items: flex-start;
+  footer .colaboradores {
+    display: flex;
+    margin-bottom: 0%;
+  }
+  footer .colaboradores .tag {
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: white;
+    color: #312f2f;
+    overflow: hidden;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin-right: 15px;
+  }
+  footer .colaboradores .tag img {
+    width: 30px;
+    padding: 5px;
+    background-image: linear-gradient(#d60000 0%, #fc3737 51%, #fa8e8e 100%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-right: 3px;
   }
   footer .footer-footer ul {
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
+    font-size: 14px;
   }
   footer .footer-footer ul .tag {
-    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: white;
+    color: #312f2f;
+    overflow: hidden;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     margin-left: 0%;
+    margin-top: 5px;
+  }
+  footer .footer-footer ul .tag img {
+    width: 30px;
+    padding: 5px;
+    background-image: linear-gradient(#d60000 0%, #fc3737 51%, #fa8e8e 100%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-right: 3px;
   }
   footer .redes li {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 .paginado {
@@ -506,21 +550,65 @@ footer .body-footer .column-footer h2 {
     display: flex;
     flex-direction: column;
   }
-  footer .footer-footer {
-    flex-direction: column;
-    align-items: flex-start;
+  footer .colaboradores {
+    display: flex;
+    margin-bottom: 0%;
+  }
+  footer .colaboradores .tag {
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: white;
+    color: #312f2f;
+    overflow: hidden;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin-right: 15px;
+  }
+  footer .colaboradores .tag img {
+    width: 30px;
+    padding: 5px;
+    background-image: linear-gradient(#d60000 0%, #fc3737 51%, #fa8e8e 100%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-right: 3px;
   }
   footer .footer-footer ul {
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
+    font-size: 14px;
   }
   footer .footer-footer ul .tag {
-    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: white;
+    color: #312f2f;
+    overflow: hidden;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     margin-left: 0%;
+    margin-top: 5px;
+  }
+  footer .footer-footer ul .tag img {
+    width: 30px;
+    padding: 5px;
+    background-image: linear-gradient(#d60000 0%, #fc3737 51%, #fa8e8e 100%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-right: 3px;
   }
   footer .redes li {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
