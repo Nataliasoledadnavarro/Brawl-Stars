@@ -104,6 +104,97 @@ nav #boton-nav-brawlers {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+#descripcion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#descripcion .box {
+  width: 100%;
+  max-width: 1400px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: #312f2f;
+  font-family: "Roboto", sans-serif;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  display: flex;
+}
+#descripcion #seccion-star-powers {
+  display: none;
+}
+#descripcion .contenedor-img-principal-descripcion {
+  width: 30%;
+  overflow: hidden;
+  margin: 20px;
+}
+#descripcion .contenedor-img-principal-descripcion .img-principal-descripcion {
+  width: 100%;
+}
+#descripcion .info-principal-descripcion {
+  width: 70%;
+}
+#descripcion .info-principal-descripcion h2 {
+  font-family: "Teko", sans-serif;
+  font-size: 40px;
+  letter-spacing: 2px;
+  margin: 0%;
+}
+#descripcion .info-principal-descripcion #rarity-descripcion {
+  background-color: black;
+  border-radius: 3px;
+  padding: 3px;
+  width: 150px;
+}
+#descripcion .info-principal-descripcion p {
+  margin-top: 3px;
+  margin-bottom: 12px;
+  width: 95%;
+}
+
+#seccion-star-powers {
+  flex-direction: column;
+  padding-left: 20px;
+}
+#seccion-star-powers h2 {
+  font-family: "Teko", sans-serif;
+  font-size: 40px;
+  letter-spacing: 2px;
+  margin: 0%;
+}
+
+.item div {
+  display: flex;
+}
+.item div .img-item {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  padding: 10px;
+}
+.item div .img-item img {
+  object-position: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  #seccion-descripcion {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 700px) and (max-width: 500px) {
+  #seccion-descripcion {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+  }
+  #seccion-descripcion .contenedor-img-principal-descripcion {
+    margin: 0;
+    margin-top: 20px;
+  }
+  #seccion-descripcion .info-principal-descripcion {
+    width: 100%;
+  }
+}
 footer {
   width: 100%;
   max-width: 1400px;

@@ -1,0 +1,93 @@
+#descripcion{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+.box {
+  @include box;
+}
+#seccion-star-powers{
+  display:none;
+}
+.contenedor-img-principal-descripcion {
+  width: 30%;
+  overflow: hidden;
+  margin: 20px;
+  .img-principal-descripcion {
+    width: 100%;
+  }
+}
+
+.info-principal-descripcion {
+  width: 70%;
+  h2 {
+    @include h2-descripcion
+  }  
+  #rarity-descripcion {
+    background-color: black;
+    border-radius: 3px;
+    padding: 3px;
+    width: 150px;
+  }
+  p{
+      margin-top: 3px;
+      margin-bottom: 12px;
+      width: 95%;
+  }
+  
+}
+}
+
+#seccion-star-powers{
+  flex-direction: column;
+  padding-left: 20px;
+  h2{
+    @include h2-descripcion;
+  }
+}
+
+.item{
+  div{
+    display: flex;
+    .img-item{
+     width: 40px;
+     height: 40px;
+      overflow: hidden;
+     padding: 10px;
+      //border-radius: 50%;
+      //box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+     
+      //background-color: rgba(199, 193, 193, 0.397);
+      img{
+        object-position: center;
+        width: 100%;
+       
+        
+      }
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 700px) {
+  #seccion-descripcion {
+    width: 90%;
+}
+@media screen and (max-width: 500px) {
+  #seccion-descripcion {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    .contenedor-img-principal-descripcion {
+      margin: 0;
+      margin-top: 20px;
+
+    }
+    .info-principal-descripcion {
+      width: 100%;}
+    }
+    
+}
+
+}
