@@ -59,12 +59,12 @@ const mostrarSeccion = (array, seccion) => {
 };
 
 // NAV
-botonNavBrawlers.onclick = (e) =>{
+botonNavBrawlers.onclick = (e) => {
   e.preventDefault()
   header.style.display = "block";
   nav.style.display = "flex";
   formularioBusqueda.style.display = "flex"
-  mostrarSeccion(arraySecciones,seccionPrincipal)
+  mostrarSeccion(arraySecciones, seccionPrincipal)
 }
 
 
@@ -154,7 +154,7 @@ const mostrarBusqueda = () => {
       <img src="${resultado.imageUrl}" alt="Imagen del brawler ${resultado.name}">
       <h3>${resultado.name}</h3>
       </article>`;
-        mostrarSeccion(arraySecciones,seccionBusqueda)
+        mostrarSeccion(arraySecciones, seccionBusqueda)
         seccionBusqueda.innerHTML = mostrarRestultado;
         inputBusqueda.value = ""
         traerBrawler()
@@ -169,9 +169,9 @@ formularioBusqueda.onsubmit = (event) => {
   mostrarBusqueda();
 };
 
-botonCerrarModal.onclick = () =>{
+botonCerrarModal.onclick = () => {
   contenedorModalBusqueda.style.display = "none"
-  mostrarSeccion(arraySecciones,seccionPrincipal)
+  mostrarSeccion(arraySecciones, seccionPrincipal)
 }
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -184,46 +184,48 @@ const traerBrawler = () => {
   const tarjetas = document.querySelectorAll(".tarjeta-brawler")
 
   for (let i = 0; i < tarjetas.length; i++) {
-    tarjetas[i].onclick = () =>{
-      let id = tarjetas[i].dataset.id 
+    tarjetas[i].onclick = () => {
+      let id = tarjetas[i].dataset.id
       Number(id)
       fetch(`https://api.brawlapi.com/v1/brawlers/${id}`)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data)
-        mostrarDescripcion(data)
-        mostrarStarPowers(data)
-      });
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data)
+          mostrarDescripcion(data)
+          mostrarStarPowers(data)
+        });
     }
-  }  
+  }
 };
 
 const mostrarDescripcion = (personaje) => {
-header.style.display = "none"
-formularioBusqueda.style.display = "none"
-mostrarSeccion(arraySecciones,seccionDescripcion)
-imagenPrincipalDescripcion.src = personaje.imageUrl
-nombreDescripcion.textContent = personaje.name
-claseNombre.textContent = personaje.class.name
-rarityDescripcion.textContent = personaje.rarity.name
-rarityDescripcion.style.color = personaje.rarity.color
-descripcion.textContent = personaje.description
+  header.style.display = "none"
+  formularioBusqueda.style.display = "none"
+  mostrarSeccion(arraySecciones, seccionDescripcion)
+  imagenPrincipalDescripcion.src = personaje.imageUrl
+  nombreDescripcion.textContent = personaje.name
+  claseNombre.textContent = personaje.class.name
+  rarityDescripcion.textContent = personaje.rarity.name
+  rarityDescripcion.style.color = personaje.rarity.color
+  descripcion.textContent = personaje.description
 
 }
 
-const mostrarStarPowers = (personaje) =>{
+const mostrarStarPowers = (personaje) => {
   const array = personaje.starPowers
-console.log(array)
-  if(array.length > 0){
+  console.log(array)
+  if (array.length > 0) {
     seccionStarPowers.style.display = "flex";
-    const html = array.reduce((acc,curr)=>{
-      return acc + `<div class="contenedor-img-item">
-      <img src="${curr.imageUrl}" id="img-item" alt="icono Star Power">
-    </div>
-    <p class="nombre-item">${curr.name}</p>
-    <p class="descripcion-item">curr-description</p>`
-
-    },"")
+    const html = array.reduce((acc, curr) => {
+      return acc + `<div class="item">
+      <div>
+        <div class="img-item">
+          <img src="${curr.imageUrl}" alt="icono Star Power">
+        </div>
+        <p class="nombre-item">${curr.name}</p>
+      </div>
+      <p class="descripcion-item">${curr.description}</p> </div>`
+    }, "")
     contenedorItems.innerHTML = html
   }
 }

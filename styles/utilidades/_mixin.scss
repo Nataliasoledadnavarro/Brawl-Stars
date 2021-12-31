@@ -76,7 +76,7 @@
 }
 
 @mixin box{
-  width: 70%;
+ width: 100%;
   max-width: $max-whidth;
   margin-top: 30px;
   margin-bottom: 20px;
@@ -85,4 +85,11 @@
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   display: flex;
+}
+
+@mixin h2-descripcion{
+  font-family: $font-titulo;
+  font-size: 40px;
+  letter-spacing: 2px;
+  margin: 0%;
 }
