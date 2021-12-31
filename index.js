@@ -27,8 +27,17 @@ const contenedorModalBusqueda = document.getElementById("contenedor-modal")
 const botonCerrarModal = document.getElementById("cerrar-modal")
 
 // Sección descripción.
-const seccionDescripcion = document.getElementById("seccion-descripcion")
+const seccionDescripcion = document.getElementById("descripcion")
+const contenedorImagenPrincipalDescripcion = document.querySelector(".contenedor-img-principal-descripcion")
+const imagenPrincipalDescripcion = document.querySelector(".img-principal-descripcion")
+const nombreDescripcion = document.getElementById("nombre-descripcion")
+const claseNombre = document.getElementById("clase-nombre")
+const rarityDescripcion = document.getElementById("rarity-descripcion")
+const descripcion = document.getElementById("descripcion-principal")
 
+//star powers 
+const seccionStarPowers = document.getElementById("seccion-star-powers")
+const contenedorItems = document.getElementById("contenedor-items")
 
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////
                                            MAQUETADO
@@ -181,16 +190,40 @@ const traerBrawler = () => {
       fetch(`https://api.brawlapi.com/v1/brawlers/${id}`)
       .then((res) => res.json())
       .then((data) => {
+        console.log(data)
         mostrarDescripcion(data)
+        mostrarStarPowers(data)
       });
     }
   }  
 };
 
-
-const mostrarDescripcion = personaje => {
+const mostrarDescripcion = (personaje) => {
 header.style.display = "none"
 formularioBusqueda.style.display = "none"
 mostrarSeccion(arraySecciones,seccionDescripcion)
+imagenPrincipalDescripcion.src = personaje.imageUrl
+nombreDescripcion.textContent = personaje.name
+claseNombre.textContent = personaje.class.name
+rarityDescripcion.textContent = personaje.rarity.name
+rarityDescripcion.style.color = personaje.rarity.color
+descripcion.textContent = personaje.description
+
 }
 
+const mostrarStarPowers = (personaje) =>{
+  const array = personaje.starPowers
+console.log(array)
+  if(array.length > 0){
+    seccionStarPowers.style.display = "flex";
+    const html = array.reduce((acc,curr)=>{
+      return acc + `<div class="contenedor-img-item">
+      <img src="${curr.imageUrl}" id="img-item" alt="icono Star Power">
+    </div>
+    <p class="nombre-item">${curr.name}</p>
+    <p class="descripcion-item">curr-description</p>`
+
+    },"")
+    contenedorItems.innerHTML = html
+  }
+}

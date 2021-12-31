@@ -72,7 +72,17 @@
     border-top-left-radius:10px;
     border-bottom-left-radius:10px;
     margin-right: 3px;
-    
-
   }
+}
+
+@mixin box{
+  width: 70%;
+  max-width: $max-whidth;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: $negro;
+  font-family: $font-textos-generales;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  display: flex;
 }

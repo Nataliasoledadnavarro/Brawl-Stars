@@ -1,0 +1,66 @@
+#descripcion{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+.box {
+  @include box;
+ 
+}
+#seccion-star-powers{
+  display:none;
+}
+.contenedor-img-principal-descripcion {
+  width: 30%;
+  overflow: hidden;
+  margin: 20px;
+  .img-principal-descripcion {
+    width: 100%;
+  }
+}
+
+.info-principal-descripcion {
+  width: 70%;
+  h2 {
+    font-family: $font-titulo;
+    font-size: 40px;
+    letter-spacing: 2px;
+    margin: 0%;
+  }  
+  #rarity-descripcion {
+    background-color: black;
+    border-radius: 3px;
+    padding: 3px;
+    width: 150px;
+  }
+  p{
+      margin-top: 3px;
+      margin-bottom: 12px;
+      width: 95%;
+  }
+  
+}
+}
+
+
+@media screen and (max-width: 700px) {
+  #seccion-descripcion {
+    width: 90%;
+}
+@media screen and (max-width: 500px) {
+  #seccion-descripcion {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    .contenedor-img-principal-descripcion {
+      margin: 0;
+      margin-top: 20px;
+
+    }
+    .info-principal-descripcion {
+      width: 100%;}
+    }
+    
+}
+
+}
