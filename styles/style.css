@@ -109,8 +109,8 @@ nav #boton-nav-brawlers {
   flex-direction: column;
   align-items: center;
 }
-#descripcion .box {
-  width: 100%;
+#descripcion .contenedor-principal {
+  width: 70%;
   max-width: 1400px;
   margin-top: 30px;
   margin-bottom: 20px;
@@ -119,11 +119,8 @@ nav #boton-nav-brawlers {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   display: flex;
 }
-#descripcion #seccion-star-powers {
-  display: none;
-}
 #descripcion .contenedor-img-principal-descripcion {
-  width: 30%;
+  width: 180px;
   overflow: hidden;
   margin: 20px;
 }
@@ -152,28 +149,55 @@ nav #boton-nav-brawlers {
 }
 
 #seccion-star-powers {
+  width: 70%;
+  max-width: 1400px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: #312f2f;
+  font-family: "Roboto", sans-serif;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  display: flex;
   flex-direction: column;
-  padding-left: 20px;
 }
 #seccion-star-powers h2 {
   font-family: "Teko", sans-serif;
   font-size: 40px;
   letter-spacing: 2px;
   margin: 0%;
+  padding-left: 20px;
 }
-
-.item div {
+#seccion-star-powers .item div {
   display: flex;
+  padding-left: 20px;
 }
-.item div .img-item {
+#seccion-star-powers .item div .img-item {
   width: 40px;
   height: 40px;
   overflow: hidden;
   padding: 10px;
 }
-.item div .img-item img {
-  object-position: center;
+#seccion-star-powers .item div .img-item img {
   width: 100%;
+}
+#seccion-star-powers .item div .nombre-item {
+  text-shadow: 0px 0px 5px rgba(252, 227, 6, 0.46);
+  font-family: "Teko", sans-serif;
+  font-size: 40px;
+  letter-spacing: 2px;
+  margin: 0%;
+  font-size: 30px;
+  letter-spacing: 0px;
+  margin-top: 10px;
+}
+#seccion-star-powers .item .descripcion-item {
+  width: 90%;
+  margin-left: 30px;
+  font-family: "Roboto", sans-serif;
+  margin-top: 0%;
+}
+
+#seccion-star-powers {
+  display: none;
 }
 
 @media screen and (max-width: 700px) {
@@ -181,18 +205,25 @@ nav #boton-nav-brawlers {
     width: 90%;
   }
 }
-@media screen and (max-width: 700px) and (max-width: 500px) {
-  #seccion-descripcion {
+@media screen and (max-width: 500px) {
+  .contenedor-principal {
     flex-direction: column;
-    align-items: flex-start;
+    width: 100%;
+  }
+
+  #descripcion .contenedor-principal {
+    width: 90%;
+  }
+  #descripcion .info-principal-descripcion {
+    width: 90%;
     padding-left: 20px;
   }
-  #seccion-descripcion .contenedor-img-principal-descripcion {
-    margin: 0;
-    margin-top: 20px;
+  #descripcion .info-principal-descripcion .contenedor-principal {
+    width: 90%;
   }
-  #seccion-descripcion .info-principal-descripcion {
-    width: 100%;
+
+  #seccion-star-powers {
+    width: 90%;
   }
 }
 footer {
