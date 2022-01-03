@@ -86,3 +86,41 @@
   letter-spacing: 2px;
   margin: 0%;
 }
+
+@mixin item($textShadow:0px 0px 5px rgba(252, 227, 6, 0.46)){
+  flex-direction: column;
+  h2 {
+    @include h2-descripcion;
+    padding-left: 20px;
+  }
+  .item {
+    div {
+      display: flex;
+      padding-left: 20px;
+      .img-item {
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        padding: 10px;
+        img {
+          width: 100%;
+        }
+      }
+      .nombre-item {
+        text-shadow: $textShadow;
+        @include h2-descripcion;
+        font-size: 30px;
+        letter-spacing: 0px;
+        margin-top: 10px;
+      }
+    }
+    .descripcion-item {
+      width: 90%;
+      margin-left: 30px;
+      font-family: $font-textos-generales;
+      margin-top: 0%;
+    }
+  }
+    
+  
+}

@@ -1,8 +1,8 @@
 // Nav
-const nav = document.querySelector("nav")
+const nav = document.querySelector("nav");
 const botonNavBrawlers = document.getElementById("boton-nav-brawlers");
 //Header
-const header = document.querySelector("header")
+const header = document.querySelector("header");
 
 //Sección Principal
 const seccionPrincipal = document.querySelector(".seccion-principal-brawlers");
@@ -23,30 +23,40 @@ const seccionBusqueda = document.getElementById("seccion-busqueda");
 const formularioBusqueda = document.getElementById("formulario-busqueda");
 
 //Modal
-const contenedorModalBusqueda = document.getElementById("contenedor-modal")
-const botonCerrarModal = document.getElementById("cerrar-modal")
+const contenedorModalBusqueda = document.getElementById("contenedor-modal");
+const botonCerrarModal = document.getElementById("cerrar-modal");
 
 // Sección descripción.
-const seccionDescripcion = document.getElementById("descripcion")
-const contenedorImagenPrincipalDescripcion = document.querySelector(".contenedor-img-principal-descripcion")
-const imagenPrincipalDescripcion = document.querySelector(".img-principal-descripcion")
-const nombreDescripcion = document.getElementById("nombre-descripcion")
-const claseNombre = document.getElementById("clase-nombre")
-const rarityDescripcion = document.getElementById("rarity-descripcion")
-const descripcion = document.getElementById("descripcion-principal")
+const seccionDescripcion = document.getElementById("descripcion");
+const contenedorImagenPrincipalDescripcion = document.querySelector(
+  ".contenedor-img-principal-descripcion"
+);
+const imagenPrincipalDescripcion = document.querySelector(
+  ".img-principal-descripcion"
+);
+const nombreDescripcion = document.getElementById("nombre-descripcion");
+const claseNombre = document.getElementById("clase-nombre");
+const rarityDescripcion = document.getElementById("rarity-descripcion");
+const descripcion = document.getElementById("descripcion-principal");
 
-//star powers 
-const seccionStarPowers = document.getElementById("seccion-star-powers")
-const contenedorItems = document.getElementById("contenedor-items")
+//star powers
+const seccionStarPowers = document.getElementById("seccion-star-powers");
+const contenedorItemsStarPowers = document.getElementById(
+  "contenedor-items-star-powers"
+);
+// Gadgets
+const seccionGadgets = document.getElementById("seccion-gadgets");
+const contenedorItemsGadgets = document.getElementById(
+  "contenedor-items-gadgets"
+);
+//Videos
+const seccionVideos = document.getElementById("seccion-videos");
+const contenedorVideos = document.getElementById("contenedor-videos");
 
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////
                                            MAQUETADO
 ///////////////////////////////////////////////////////////////////////////////////////////////////////*/
-const arraySecciones = [
-  seccionPrincipal,
-  seccionBusqueda,
-  seccionDescripcion,
-];
+const arraySecciones = [seccionPrincipal, seccionBusqueda, seccionDescripcion];
 
 const mostrarSeccion = (array, seccion) => {
   for (let i = 0; i < array.length; i++) {
@@ -60,13 +70,12 @@ const mostrarSeccion = (array, seccion) => {
 
 // NAV
 botonNavBrawlers.onclick = (e) => {
-  e.preventDefault()
+  e.preventDefault();
   header.style.display = "block";
   nav.style.display = "flex";
-  formularioBusqueda.style.display = "flex"
-  mostrarSeccion(arraySecciones, seccionPrincipal)
-}
-
+  formularioBusqueda.style.display = "flex";
+  mostrarSeccion(arraySecciones, seccionPrincipal);
+};
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                                   FETCH PRINCIPAL
@@ -154,12 +163,12 @@ const mostrarBusqueda = () => {
       <img src="${resultado.imageUrl}" alt="Imagen del brawler ${resultado.name}">
       <h3>${resultado.name}</h3>
       </article>`;
-        mostrarSeccion(arraySecciones, seccionBusqueda)
+        mostrarSeccion(arraySecciones, seccionBusqueda);
         seccionBusqueda.innerHTML = mostrarRestultado;
-        inputBusqueda.value = ""
-        traerBrawler()
+        inputBusqueda.value = "";
+        traerBrawler();
       } else {
-        contenedorModalBusqueda.style.display = "flex"
+        contenedorModalBusqueda.style.display = "flex";
       }
     });
 };
@@ -170,54 +179,54 @@ formularioBusqueda.onsubmit = (event) => {
 };
 
 botonCerrarModal.onclick = () => {
-  contenedorModalBusqueda.style.display = "none"
-  mostrarSeccion(arraySecciones, seccionPrincipal)
-}
+  contenedorModalBusqueda.style.display = "none";
+  mostrarSeccion(arraySecciones, seccionPrincipal);
+};
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                             SECCIÓN DESCRIPCIÓN
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-
 const traerBrawler = () => {
-
-  const tarjetas = document.querySelectorAll(".tarjeta-brawler")
+  const tarjetas = document.querySelectorAll(".tarjeta-brawler");
 
   for (let i = 0; i < tarjetas.length; i++) {
     tarjetas[i].onclick = () => {
-      let id = tarjetas[i].dataset.id
-      Number(id)
+      let id = tarjetas[i].dataset.id;
+      Number(id);
       fetch(`https://api.brawlapi.com/v1/brawlers/${id}`)
         .then((res) => res.json())
         .then((data) => {
-          console.log(data)
-          mostrarDescripcion(data)
-          mostrarStarPowers(data)
+          console.log(data);
+          mostrarDescripcion(data);
+          mostrarStarPowers(data);
+          mostrarGadgets(data);
+          mostrarVideos(data);
         });
-    }
+    };
   }
 };
 
 const mostrarDescripcion = (personaje) => {
-  header.style.display = "none"
-  formularioBusqueda.style.display = "none"
-  mostrarSeccion(arraySecciones, seccionDescripcion)
-  imagenPrincipalDescripcion.src = personaje.imageUrl
-  nombreDescripcion.textContent = personaje.name
-  claseNombre.textContent = personaje.class.name
-  rarityDescripcion.textContent = personaje.rarity.name
-  rarityDescripcion.style.color = personaje.rarity.color
-  descripcion.textContent = personaje.description
-
-}
+  header.style.display = "none";
+  formularioBusqueda.style.display = "none";
+  mostrarSeccion(arraySecciones, seccionDescripcion);
+  imagenPrincipalDescripcion.src = personaje.imageUrl;
+  nombreDescripcion.textContent = personaje.name;
+  claseNombre.textContent = personaje.class.name;
+  rarityDescripcion.textContent = personaje.rarity.name;
+  rarityDescripcion.style.color = personaje.rarity.color;
+  descripcion.textContent = personaje.description;
+};
 
 const mostrarStarPowers = (personaje) => {
-  const array = personaje.starPowers
-  console.log(array)
+  const array = personaje.starPowers;
   if (array.length > 0) {
     seccionStarPowers.style.display = "flex";
     const html = array.reduce((acc, curr) => {
-      return acc + `<div class="item">
+      return (
+        acc +
+        `<div class="item">
       <div>
         <div class="img-item">
           <img src="${curr.imageUrl}" alt="icono Star Power">
@@ -225,7 +234,52 @@ const mostrarStarPowers = (personaje) => {
         <p class="nombre-item">${curr.name}</p>
       </div>
       <p class="descripcion-item">${curr.description}</p> </div>`
-    }, "")
-    contenedorItems.innerHTML = html
+      );
+    }, "");
+    contenedorItemsStarPowers.innerHTML = html;
   }
-}
+};
+
+const mostrarGadgets = (personaje) => {
+  const array = personaje.gadgets;
+  if (array.length > 0) {
+    seccionGadgets.style.display = "flex";
+    const html = array.reduce((acc, curr) => {
+      return (
+        acc +
+        `<div class="item">
+      <div>
+        <div class="img-item">
+          <img src="${curr.imageUrl}" alt="icono Star Power">
+        </div>
+        <p class="nombre-item">${curr.name}</p>
+      </div>
+      <p class="descripcion-item">${curr.description}</p> </div>`
+      );
+    }, "");
+    contenedorItemsGadgets.innerHTML = html;
+  }
+};
+
+const mostrarVideos = (personaje) => {
+  const array = personaje.videos;
+  if (array.length > 0) {
+    seccionVideos.style.display = "flex";
+    const html = array.reduce((acc, curr) => {
+      return (
+        acc +
+        `<div class="item">
+      <div>
+        <div class="video-item">
+          <video controls poster="${curr.previewUrl}">
+            <source src="${curr.videoUrl}" type="video/mp4"/>
+          </video>
+        </div>
+        <p class="nombre-item">${curr.name}</p>
+      </div>
+      <p class="descripcion-item">${curr.description}</p> </div>`
+      );
+    }, "");
+    contenedorVideos.innerHTML = html;
+  }
+};
