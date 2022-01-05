@@ -560,7 +560,7 @@ footer .body-footer .column-footer h2 {
 }
 
 #formulario-busqueda {
-  width: 70%;
+  width: 80%;
   height: 150px;
   margin-top: 30px;
   display: flex;
@@ -568,7 +568,7 @@ footer .body-footer .column-footer h2 {
   align-items: center;
 }
 #formulario-busqueda #input-busqueda {
-  width: 70%;
+  width: 50%;
   height: 30px;
   border: none;
   background: transparent;
@@ -581,7 +581,7 @@ footer .body-footer .column-footer h2 {
   color: #312f2f;
 }
 #formulario-busqueda #boton-buscar {
-  width: 15%;
+  width: 10%;
   height: 33px;
   font-family: "Roboto", sans-serif;
   color: white;
@@ -595,6 +595,25 @@ footer .body-footer .column-footer h2 {
 #formulario-busqueda #boton-buscar:hover {
   background: linear-gradient(#061efc 0%, #527ffc 51%, #9db2f8 100%);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.contenedor-select {
+  display: flex;
+  justify-content: space-around;
+}
+.contenedor-select label {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: #706f6f;
+  margin-right: 5px;
+}
+.contenedor-select select {
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  color: red;
+  border-bottom: solid 1px black;
 }
 
 @media screen and (max-width: 800px) {
@@ -614,15 +633,16 @@ footer .body-footer .column-footer h2 {
     background-image: linear-gradient(#d60000 0%, #fc3737 51%, #fa8e8e 100%);
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   #formulario-busqueda {
-    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
   }
   #formulario-busqueda #input-busqueda {
-    width: 90%;
+    width: 70%;
   }
   #formulario-busqueda #boton-buscar {
-    width: 30%;
+    width: 20%;
     height: 33px;
     font-family: "Roboto", sans-serif;
     color: white;

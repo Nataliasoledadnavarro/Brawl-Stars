@@ -11,16 +11,21 @@ const contenedorBrawlers = document.querySelector(
 );
 
 // Paginado
+const seccionPaginado = document.querySelector(".paginado")
 const botonPrimeraPagina = document.getElementById("boton-primera-pagina");
 const botonPaginaAnterior = document.getElementById("boton-pagina-anterior");
+const iconoPaginaAnterior = document.querySelector("#boton-pagina-anterior i");
 const botonProximaPagina = document.getElementById("boton-proxima-pagina");
+const iconoProximaPagina = document.querySelector("#boton-proxima-pagina i");
 const botonUltimaPagina = document.getElementById("boton-ultima-pagina");
-
 // Busqueda
 const inputBusqueda = document.getElementById("input-busqueda");
 const botonBuscar = document.getElementById("boton-buscar");
 const seccionBusqueda = document.getElementById("seccion-busqueda");
 const formularioBusqueda = document.getElementById("formulario-busqueda");
+const selectRarity = document.getElementById("select-rarity")
+const selectOrden = document.getElementById("select-orden")
+
 
 //Modal
 const contenedorModalBusqueda = document.getElementById("contenedor-modal");
@@ -84,7 +89,10 @@ const mostrarBrawlers = () => {
   fetch(`https://api.brawlapi.com/v1/brawlers`)
     .then((res) => res.json())
     .then((data) => {
+      console.log(data)
       tarjetasBrawlersHtml(data, paginaActual);
+      filtrarRarity(data,selectRarity.value)
+      ordenar(data,selectOrden.value)
       traerBrawler();
     });
 };
@@ -124,15 +132,22 @@ botonPrimeraPagina.onclick = () => {
 };
 
 botonPaginaAnterior.onclick = () => {
+  iconoProximaPagina.style.color = "white"
   if (paginaActual === 0) {
+    iconoPaginaAnterior.style.color = "grey"
     prev.disabled = true;
-  }
+  }else{iconoProximaPagina.style.color = "white"}
 
   paginaActual = paginaActual - 10;
   mostrarBrawlers();
 };
 
 botonProximaPagina.onclick = () => {
+  
+  if (paginaActual === 50) {
+    iconoProximaPagina.style.color = "grey"
+    prev.disabled = true;
+  }else{iconoPaginaAnterior.style.color = "white"}
   paginaActual = paginaActual + 10;
   mostrarBrawlers();
 };
@@ -283,3 +298,65 @@ const mostrarVideos = (personaje) => {
     contenedorVideos.innerHTML = html;
   }
 };
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                            SELECT RARITY 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+selectRarity.onchange = () =>{
+  mostrarBrawlers();
+}
+
+
+const filtrarRarity = (data,value) =>{
+
+  if(value === "Todos" || value === ""){
+    tarjetasBrawlersHtml(data, paginaActual);
+    seccionPaginado.style.display = "flex";
+  } else{
+  const arrayFiltrado = data.list.filter((personaje,index,data)=>{
+    return personaje.rarity.name === value
+  })
+  const html = arrayFiltrado.reduce((acc, curr) => {
+    return (
+      acc +
+      `<article class="tarjeta-brawler" data-id=${curr.id}>
+        <img src="${curr.imageUrl}" alt="Imagen del brawler ${curr.name}">
+          <h3>${curr.name}</h3>
+      </article>`
+    );
+  }, "");
+
+  contenedorBrawlers.innerHTML = html;
+  seccionPaginado.style.display = "none"}
+ 
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                            SELECT A-Z Z-A
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+selectOrden.onchange = () =>{
+  mostrarBrawlers();
+}
+
+const ordenar = (data,value) =>{
+if(value === "a-z"){
+  const ordenarData = data.list.sort((a,b)=>{
+    if(a.name.toLowerCase() < b.name.toLowerCase()){return -1}
+    if(a.name.toLowerCase() > b.name.toLowerCase()){return 1}
+    return 0
+  })
+  const dataOrdenada = {list: ordenarData}
+  tarjetasBrawlersHtml(dataOrdenada, paginaActual);
+}
+
+if(value === "z-a"){
+  const ordenarData = data.list.sort((a,b)=>{
+    if(a.name.toLowerCase() > b.name.toLowerCase()){return -1}
+    if(a.name.toLowerCase() < b.name.toLowerCase()){return  1}
+    return 0
+  })
+  const dataOrdenada = {list: ordenarData}
+  tarjetasBrawlersHtml(dataOrdenada, paginaActual);
+}
+
+}

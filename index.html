@@ -28,10 +28,31 @@
   </nav>
   <header aria-label="Grupo de personajes de Brawl Stars"></header>
   <form id="formulario-busqueda">
-    <!--<label for="input-busqueda" class="label-busqueda">
-        ¡Ingresá el nombre y encontrá tu Brawler!</label>-->
+    <label for="input-busqueda"></label>
     <input type="text" id="input-busqueda" placeholder=" ¡Ingresá el nombre y encontrá tu Brawler!" />
     <button id="boton-buscar">Buscar</button>
+
+    <div class="contenedor-select">
+      <label>Rarity </label>
+      <select id="select-rarity">
+        <option value=""></option>
+        <option value="Todos">Todos</option>
+        <option value="Chromatic">Chromatic</option>
+        <option value="Trophy Road">Trophy Road</option>
+        <option value="Rare">Rare</option>
+        <option value="Super Rare">Super Rare</option>
+        <option value="Epic">Epic</option>
+        <option value="Mythic">Mythic</option>
+        <option value="Legendary">Legendary</option>
+      </select>
+
+      <label>Ordenar</label>
+      <select id="select-orden">
+        <option value=""></option>
+        <option value="a-z">A-Z</option>
+        <option value="z-a">Z-A</option>
+      </select>
+</div>
   </form>
   <div id="contenedor-modal" class="ocultar">
     <div id="modal-busqueda">
@@ -56,69 +77,78 @@
     </div>
   </section>
 
-  <section id="descripcion" >
+  <section id="descripcion">
     <div class="contenedor-principal">
       <div class="contenedor-img-principal-descripcion">
-        <img src="" class="img-principal-descripcion"alt="imagen principal del brawler seleccionado">
+        <img src="" class="img-principal-descripcion" alt="imagen principal del brawler seleccionado">
       </div>
-    <div class="info-principal-descripcion"> 
-      <h2 id="nombre-descripcion"></h2>
-      <p id="clase-nombre"></p>
-      <p id="rarity-descripcion"></p>
-      <p id="descripcion-principal"></p>
+      <div class="info-principal-descripcion">
+        <h2 id="nombre-descripcion"></h2>
+        <p id="clase-nombre"></p>
+        <p id="rarity-descripcion"></p>
+        <p id="descripcion-principal"></p>
+      </div>
     </div>
-  </div>
 
-  <div id="seccion-star-powers">
-    <h2>Star Powers</h2>
-    <div id="contenedor-items-star-powers">
-      
-    </div>
-  </div>
+    <div id="seccion-star-powers">
+      <h2>Star Powers</h2>
+      <div id="contenedor-items-star-powers">
 
-  <div id="seccion-gadgets">
-    <h2>Gadgets</h2>
-    <div id="contenedor-items-gadgets">
-      
+      </div>
     </div>
-  </div>
 
-  <div id="seccion-videos">
-    <h2>Videos</h2>
-    <div id="contenedor-videos">
-      
+    <div id="seccion-gadgets">
+      <h2>Gadgets</h2>
+      <div id="contenedor-items-gadgets">
+
+      </div>
     </div>
-  </div>
+
+    <div id="seccion-videos">
+      <h2>Videos</h2>
+      <div id="contenedor-videos">
+
+      </div>
+    </div>
   </section>
 
   <footer>
     <div class="body-footer">
-    <div class="column-footer">
-      <h2>Buscador de Brawl Stars</h2>
-      <p>Este proyecto lo llevé adelante inspirada y acompañada por:</p>
-      <ul class="colaboradores">
-        <li class="tag"> <img src="imagenes/mortis.png" alt="Imagen de Mortis" >Ramiro</li>
-        <li class="tag"> <img src="imagenes/8bit.png" alt="Imagen de 8-bit">Alejo</li>
-      </ul>
-    </div>
+      <div class="column-footer">
+        <h2>Buscador de Brawl Stars</h2>
+        <p>Este proyecto lo llevé adelante inspirada y acompañada por:</p>
+        <ul class="colaboradores">
+          <li class="tag"> <img src="imagenes/mortis.png" alt="Imagen de Mortis">Ramiro</li>
+          <li class="tag"> <img src="imagenes/8bit.png" alt="Imagen de 8-bit">Alejo</li>
+        </ul>
+      </div>
 
-    <div class="column-footer">
-      <h2>Contactame!</h2>
-      <ul>
-        <a href="https://www.linkedin.com/in/nataliasoledadnavarro/" class="redes"><li><i class="fab fa-linkedin-in"></i>Linkedin</li></a>
-        <a href="https://github.com/Nataliasoledadnavarro" class="redes"><li><i class="fab fa-github-alt"></i>GitHub</li><a>
-        <a href="https://gmail.com"  class="redes"><li><i class="fas fa-envelope"></i>nataliasoledadnavarro@gmail.com</li></a>
+      <div class="column-footer">
+        <h2>Contactame!</h2>
+        <ul>
+          <a href="https://www.linkedin.com/in/nataliasoledadnavarro/" class="redes">
+            <li><i class="fab fa-linkedin-in"></i>Linkedin</li>
+          </a>
+          <a href="https://github.com/Nataliasoledadnavarro" class="redes">
+            <li><i class="fab fa-github-alt"></i>GitHub</li><a>
+              <a href="https://gmail.com" class="redes">
+                <li><i class="fas fa-envelope"></i>nataliasoledadnavarro@gmail.com</li>
+              </a>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-footer">
+      <ul>Hecho por:
+        <a href="https://www.linkedin.com/in/nataliasoledadnavarro/">
+          <li class="tag"> <img src="imagenes/tara.png" alt="Imagen de Tara">Naty Navarro</li>
+        </a>
+      </ul>
+      <ul>Derechos de la api:
+        <a href="https://brawlapi.com/#/"></href>
+          <li class="tag"><img src="imagenes/Star.svg" alt="Imagen estrella">Brawlapi</li>
+        </a>
       </ul>
     </div>
-  </div>
-  <div class="footer-footer">
-<ul>Hecho por:
-  <a href="https://www.linkedin.com/in/nataliasoledadnavarro/"><li class="tag"> <img src="imagenes/tara.png" alt="Imagen de Tara">Naty Navarro</li></a>
-</ul>
-<ul>Derechos de la api:
-  <a href="https://brawlapi.com/#/"></href><li class="tag"><img src="imagenes/Star.svg" alt="Imagen estrella">Brawlapi</li></a>
-</ul>
-  </div>
   </footer>
 
   <script src="index.js"></script>
