@@ -87,6 +87,14 @@
   margin: 0%;
 }
 
+@mixin select{
+height: 30px;
+border: none;
+background-color: transparent;
+color: red;
+border-bottom: solid 1px black;
+}
+
 @mixin item($textShadow:0px 0px 5px rgba(252, 227, 6, 0.46)){
   flex-direction: column;
   h2 {
