@@ -1,0 +1,22 @@
+{
+  "name": "brawl-stars",
+  "version": "1.0.0",
+  "description": "Buscador de personajes de Brawl Stars",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nataliasoledadnavarro/Brawl-Stars.git"
+  },
+  "author": "Natalia Navarro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nataliasoledadnavarro/Brawl-Stars/issues"
+  },
+  "homepage": "https://github.com/Nataliasoledadnavarro/Brawl-Stars#readme",
+  "dependencies": {
+    "sass": "^1.45.0"
+  }
+}

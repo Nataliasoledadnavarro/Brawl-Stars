@@ -1,3 +1,10 @@
+.oscuro {
+  background-image: url("../imagenes/fondo-oscuro.png");
+}
+.oscuro nav ul #boton-nav-brawlers {
+  color: white;
+}
+
 body {
   margin: 0;
   box-sizing: border-box;
@@ -16,7 +23,7 @@ li {
 }
 
 body {
-  background-image: url("../imagenes/fondo.png");
+  background-image: url("../imagenes/fondo-claro.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center top;
@@ -40,7 +47,7 @@ nav {
   width: 100%;
   max-width: 1400px;
   height: 80px;
-  background-color: #312f2f;
+  background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,20 +61,34 @@ nav .logo {
 nav img {
   width: 100%;
 }
-nav #boton-nav-brawlers {
-  margin-right: 40px;
+nav .buttons-nav {
+  width: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 30px;
+}
+nav .buttons-nav #boton-nav-brawlers {
   background: transparent;
   border: none;
-  color: white;
+  color: #312f2f;
   font-family: "Teko", sans-serif;
   font-size: 32px;
   border-radius: 10px;
   padding-left: 20px;
   padding-right: 20px;
 }
-
-#boton-nav-brawlers:hover {
+nav #boton-nav-brawlers:hover {
   box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+nav #boton-modo {
+  width: 60px;
+  border: none;
+  background-color: transparent;
+}
+nav #boton-modo img {
+  width: 100%;
+  filter: drop-shadow(0px 0px 2px white);
 }
 
 .seccion-principal-brawlers {
@@ -613,7 +634,7 @@ footer .body-footer .column-footer h2 {
   border: none;
   background-color: transparent;
   color: red;
-  border-bottom: solid 1px black;
+  border-bottom: solid 1px #706f6f;
 }
 
 @media screen and (max-width: 800px) {

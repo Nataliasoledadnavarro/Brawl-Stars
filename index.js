@@ -1,6 +1,9 @@
+//Body
+const body = document.querySelector("body")
 // Nav
 const nav = document.querySelector("nav");
 const botonNavBrawlers = document.getElementById("boton-nav-brawlers");
+const botonModo = document.getElementById("boton-modo")
 //Header
 const header = document.querySelector("header");
 
@@ -81,6 +84,14 @@ botonNavBrawlers.onclick = (e) => {
   formularioBusqueda.style.display = "flex";
   mostrarSeccion(arraySecciones, seccionPrincipal);
 };
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                            MODO CLARO/OSCURO
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+botonModo.onclick = () =>{
+  body.classList.toggle("oscuro")
+//body.style.backgroundImage = 'url("../imagenes/fondo-oscuro.png")'
+}
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                                   FETCH PRINCIPAL
