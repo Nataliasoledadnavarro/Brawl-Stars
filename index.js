@@ -81,7 +81,7 @@ botonNavBrawlers.onclick = (e) => {
   header.style.display = "block";
   nav.style.display = "flex";
   formularioBusqueda.style.display = "flex";
-  botonNavBrawlers.style.display = "none"
+  botonNavBrawlers.style.display = "none";
   mostrarSeccion(arraySecciones, seccionPrincipal);
 };
 
@@ -100,7 +100,6 @@ const mostrarBrawlers = () => {
   fetch(`https://api.brawlapi.com/v1/brawlers`)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
       tarjetasBrawlersHtml(data, paginaActual);
       filtrarRarity(data, selectRarity.value);
       ordenar(data, selectOrden.value);
@@ -180,26 +179,39 @@ const capitalizar = (str) => {
   return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 };
 
-const mostrarBusqueda = () => {
+const mostrarBusqueda = (data) => {
   fetch(`https://api.brawlapi.com/v1/brawlers`)
-    .then((res) => res.json())
-    .then((data) => {
-      const resultado = data.list.find((objeto) => {
-        return objeto.name === capitalizar(inputBusqueda.value);
-      });
-      if (resultado != undefined) {
-        const mostrarRestultado = `<article class="tarjeta-brawler" data-id=${resultado.id}>
+  .then((res) => res.json())
+  .then((data) => {
+
+  let resultado = data.list.find((objeto) => {
+    return objeto.name === capitalizar(inputBusqueda.value);
+  });
+
+  if (
+    inputBusqueda.value === "8" ||
+    inputBusqueda.value === "8bit" ||
+    inputBusqueda.value === "8-bit" ||
+    inputBusqueda.value === "8-Bit" ||
+    inputBusqueda.value === "8Bit"
+  ) {
+    resultado = data.list[24];
+  }
+
+  if (resultado != undefined) {
+    const mostrarRestultado = `<article class="tarjeta-brawler" data-id=${resultado.id}>
       <img src="${resultado.imageUrl}" alt="Imagen del brawler ${resultado.name}">
       <h3>${resultado.name}</h3>
       </article>`;
-        mostrarSeccion(arraySecciones, seccionBusqueda);
-        seccionBusqueda.innerHTML = mostrarRestultado;
-        inputBusqueda.value = "";
-        traerBrawler();
-      } else {
-        contenedorModalBusqueda.style.display = "flex";
-      }
-    });
+    mostrarSeccion(arraySecciones, seccionBusqueda);
+    seccionBusqueda.innerHTML = mostrarRestultado;
+    inputBusqueda.value = "";
+    traerBrawler();
+  }
+  if (resultado === undefined) {
+    contenedorModalBusqueda.style.display = "flex";
+  }
+});
 };
 
 formularioBusqueda.onsubmit = (event) => {
@@ -237,7 +249,7 @@ const traerBrawler = () => {
 };
 
 const mostrarDescripcion = (personaje) => {
-  botonNavBrawlers.style.display = "block"
+  botonNavBrawlers.style.display = "block";
   header.style.display = "none";
   formularioBusqueda.style.display = "none";
   mostrarSeccion(arraySecciones, seccionDescripcion);
@@ -343,7 +355,6 @@ const filtrarRarity = (data, value) => {
     seccionPaginado.style.display = "none";
   }
   //ordenar(data, selectOrden.value);
-
 };
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -381,7 +392,6 @@ const ordenar = (data, value) => {
     const dataOrdenada = { list: ordenarData };
     tarjetasBrawlersHtml(dataOrdenada, paginaActual);
   }
-  
+
   filtrarRarity(data, selectRarity.value);
 };
-
