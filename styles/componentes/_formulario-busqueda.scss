@@ -65,3 +65,13 @@ select{
     }
   }
 }
+
+@media screen and (max-width: 400px) {
+  #formulario-busqueda {
+  #input-busqueda::placeholder {
+   font-size: 10px;
+}
+label{font-size: 12px;}
+}
+}
+

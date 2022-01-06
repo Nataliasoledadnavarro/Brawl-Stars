@@ -1,13 +1,60 @@
-.oscuro{
-    background-image: url("../imagenes/fondo-oscuro.png");
-    nav{
-        ul{
-            #boton-nav-brawlers{
-                color: $blanco;
-            }
-
+.oscuro {
+  background-image: url("../imagenes/fondo-oscuro.png");
+  nav {
+    border-bottom: solid 2px $gris;
+    ul {
+      #boton-nav-brawlers {
+        color: $blanco;
+      }
+      #boton-modo {
+        img {
+          filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
+          background-color: rgba(255, 255, 255, 0.63);
+          border-radius: 10px;
+          padding: 3px;
         }
+      }
     }
-}
+  }
+  #formulario-busqueda {
+    #input-busqueda::placeholder {
+      color: $blanco;
+    }
+    .contenedor-select {
+      label {
+        color: $blanco;
+      }
+      select {
+        color: $gris;
+      }
+    }
+  }
+  .tarjeta-brawler {
+    background-color: $blanco;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    h3 {
+      color: $negro;
+    }
+  }
+  #descripcion {
+    .contenedor-principal {
+      @include box-oscuro;
+    }
+    #seccion-star-powers {
+      @include box-oscuro;
+    }
+    #seccion-gadgets {
+      @include box-oscuro;
+    }
+    #seccion-videos {
+      @include box-oscuro;
+    }
+  }
 
- 
+  footer {
+    background-color: transparent;
+    border-top: solid 2px $gris;
+  }
+}
