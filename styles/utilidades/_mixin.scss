@@ -80,6 +80,11 @@
   display: flex;
 }
 
+@mixin box-oscuro{
+  box-shadow: rgba(255, 255, 255, 0.336) 0px 5px 15px 0px;
+  background-color: rgba(253, 251, 251, 0.808);
+}
+
 @mixin h2-descripcion {
   font-family: $font-titulo;
   font-size: 40px;
@@ -93,6 +98,7 @@ border: none;
 background-color: transparent;
 color: red;
 border-bottom: solid 1px $gris;
+margin-right: 15px;
 }
 
 @mixin item($textShadow:0px 0px 5px rgba(252, 227, 6, 0.46)){

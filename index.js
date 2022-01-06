@@ -1,9 +1,9 @@
 //Body
-const body = document.querySelector("body")
+const body = document.querySelector("body");
 // Nav
 const nav = document.querySelector("nav");
 const botonNavBrawlers = document.getElementById("boton-nav-brawlers");
-const botonModo = document.getElementById("boton-modo")
+const botonModo = document.getElementById("boton-modo");
 //Header
 const header = document.querySelector("header");
 
@@ -14,7 +14,7 @@ const contenedorBrawlers = document.querySelector(
 );
 
 // Paginado
-const seccionPaginado = document.querySelector(".paginado")
+const seccionPaginado = document.querySelector(".paginado");
 const botonPrimeraPagina = document.getElementById("boton-primera-pagina");
 const botonPaginaAnterior = document.getElementById("boton-pagina-anterior");
 const iconoPaginaAnterior = document.querySelector("#boton-pagina-anterior i");
@@ -26,9 +26,8 @@ const inputBusqueda = document.getElementById("input-busqueda");
 const botonBuscar = document.getElementById("boton-buscar");
 const seccionBusqueda = document.getElementById("seccion-busqueda");
 const formularioBusqueda = document.getElementById("formulario-busqueda");
-const selectRarity = document.getElementById("select-rarity")
-const selectOrden = document.getElementById("select-orden")
-
+const selectRarity = document.getElementById("select-rarity");
+const selectOrden = document.getElementById("select-orden");
 
 //Modal
 const contenedorModalBusqueda = document.getElementById("contenedor-modal");
@@ -82,16 +81,17 @@ botonNavBrawlers.onclick = (e) => {
   header.style.display = "block";
   nav.style.display = "flex";
   formularioBusqueda.style.display = "flex";
+  botonNavBrawlers.style.display = "none"
   mostrarSeccion(arraySecciones, seccionPrincipal);
 };
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                             MODO CLARO/OSCURO
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-botonModo.onclick = () =>{
-  body.classList.toggle("oscuro")
-//body.style.backgroundImage = 'url("../imagenes/fondo-oscuro.png")'
-}
+botonModo.onclick = () => {
+  body.classList.toggle("oscuro");
+  //body.style.backgroundImage = 'url("../imagenes/fondo-oscuro.png")'
+};
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                                   FETCH PRINCIPAL
@@ -100,10 +100,10 @@ const mostrarBrawlers = () => {
   fetch(`https://api.brawlapi.com/v1/brawlers`)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data)
+      console.log(data);
       tarjetasBrawlersHtml(data, paginaActual);
-      filtrarRarity(data,selectRarity.value)
-      ordenar(data,selectOrden.value)
+      filtrarRarity(data, selectRarity.value);
+      ordenar(data, selectOrden.value);
       traerBrawler();
     });
 };
@@ -143,22 +143,25 @@ botonPrimeraPagina.onclick = () => {
 };
 
 botonPaginaAnterior.onclick = () => {
-  iconoProximaPagina.style.color = "white"
+  iconoProximaPagina.style.color = "white";
   if (paginaActual === 0) {
-    iconoPaginaAnterior.style.color = "grey"
+    iconoPaginaAnterior.style.color = "grey";
     prev.disabled = true;
-  }else{iconoProximaPagina.style.color = "white"}
+  } else {
+    iconoProximaPagina.style.color = "white";
+  }
 
   paginaActual = paginaActual - 10;
   mostrarBrawlers();
 };
 
 botonProximaPagina.onclick = () => {
-  
   if (paginaActual === 50) {
-    iconoProximaPagina.style.color = "grey"
+    iconoProximaPagina.style.color = "grey";
     prev.disabled = true;
-  }else{iconoPaginaAnterior.style.color = "white"}
+  } else {
+    iconoPaginaAnterior.style.color = "white";
+  }
   paginaActual = paginaActual + 10;
   mostrarBrawlers();
 };
@@ -234,6 +237,7 @@ const traerBrawler = () => {
 };
 
 const mostrarDescripcion = (personaje) => {
+  botonNavBrawlers.style.display = "block"
   header.style.display = "none";
   formularioBusqueda.style.display = "none";
   mostrarSeccion(arraySecciones, seccionDescripcion);
@@ -313,61 +317,70 @@ const mostrarVideos = (personaje) => {
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                             SELECT RARITY 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-selectRarity.onchange = () =>{
+selectRarity.onchange = () => {
   mostrarBrawlers();
-}
+};
 
-
-const filtrarRarity = (data,value) =>{
-
-  if(value === "Todos" || value === ""){
+const filtrarRarity = (data, value) => {
+  if (value === "Todos") {
     tarjetasBrawlersHtml(data, paginaActual);
     seccionPaginado.style.display = "flex";
-  } else{
-  const arrayFiltrado = data.list.filter((personaje,index,data)=>{
-    return personaje.rarity.name === value
-  })
-  const html = arrayFiltrado.reduce((acc, curr) => {
-    return (
-      acc +
-      `<article class="tarjeta-brawler" data-id=${curr.id}>
+  } else {
+    const arrayFiltrado = data.list.filter((personaje, index, data) => {
+      return personaje.rarity.name === value;
+    });
+    const html = arrayFiltrado.reduce((acc, curr) => {
+      return (
+        acc +
+        `<article class="tarjeta-brawler" data-id=${curr.id}>
         <img src="${curr.imageUrl}" alt="Imagen del brawler ${curr.name}">
           <h3>${curr.name}</h3>
       </article>`
-    );
-  }, "");
+      );
+    }, "");
 
-  contenedorBrawlers.innerHTML = html;
-  seccionPaginado.style.display = "none"}
- 
-}
+    contenedorBrawlers.innerHTML = html;
+    seccionPaginado.style.display = "none";
+  }
+  //ordenar(data, selectOrden.value);
+
+};
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                             SELECT A-Z Z-A
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-selectOrden.onchange = () =>{
+selectOrden.onchange = () => {
   mostrarBrawlers();
-}
+};
 
-const ordenar = (data,value) =>{
-if(value === "a-z"){
-  const ordenarData = data.list.sort((a,b)=>{
-    if(a.name.toLowerCase() < b.name.toLowerCase()){return -1}
-    if(a.name.toLowerCase() > b.name.toLowerCase()){return 1}
-    return 0
-  })
-  const dataOrdenada = {list: ordenarData}
-  tarjetasBrawlersHtml(dataOrdenada, paginaActual);
-}
+const ordenar = (data, value) => {
+  if (value === "a-z") {
+    const ordenarData = data.list.sort((a, b) => {
+      if (a.name.toLowerCase() < b.name.toLowerCase()) {
+        return -1;
+      }
+      if (a.name.toLowerCase() > b.name.toLowerCase()) {
+        return 1;
+      }
+      return 0;
+    });
+    const dataOrdenada = { list: ordenarData };
+    tarjetasBrawlersHtml(dataOrdenada, paginaActual);
+  }
 
-if(value === "z-a"){
-  const ordenarData = data.list.sort((a,b)=>{
-    if(a.name.toLowerCase() > b.name.toLowerCase()){return -1}
-    if(a.name.toLowerCase() < b.name.toLowerCase()){return  1}
-    return 0
-  })
-  const dataOrdenada = {list: ordenarData}
-  tarjetasBrawlersHtml(dataOrdenada, paginaActual);
-}
-
-}
+  if (value === "z-a") {
+    const ordenarData = data.list.sort((a, b) => {
+      if (a.name.toLowerCase() > b.name.toLowerCase()) {
+        return -1;
+      }
+      if (a.name.toLowerCase() < b.name.toLowerCase()) {
+        return 1;
+      }
+      return 0;
+    });
+    const dataOrdenada = { list: ordenarData };
+    tarjetasBrawlersHtml(dataOrdenada, paginaActual);
+  }
+  
+  filtrarRarity(data, selectRarity.value);
+};
