@@ -384,3 +384,4 @@ const ordenar = (data, value) => {
   
   filtrarRarity(data, selectRarity.value);
 };
+
