@@ -8,19 +8,20 @@
 
 <img src="https://media0.giphy.com/media/gLREPOkkRAGGCGNKbZ/giphy.gif?cid=ecf05e47eq5v1f29yzieccr39ruwx8dsgi2ijmrk0fbih3pu&rid=giphy.gif&ct=s" whidth = "100%">
 
-<p>Esta web es el cuarto proyecto presentado durante mi formación como Frogramadora Front End en <a href="https://adaitw.org/">Ada</a>. En ésta oportunidad comezamos a trabajar con Api Rest y Sass.</p>
+<p>Esta web es el cuarto proyecto presentado durante mi formación como Programadora Front End en <a href="https://adaitw.org/">Ada</a>. En esta oportunidad comezamos a trabajar con API REST y SASS.</p>
 
 <img src="https://media0.giphy.com/media/gLREPOkkRAGGCGNKbZ/giphy.gif?cid=ecf05e47eq5v1f29yzieccr39ruwx8dsgi2ijmrk0fbih3pu&rid=giphy.gif&ct=s" whidth = "100%">
 
 <h2>Funcionalidades del buscador:</h2>
 <ul>
     <li>Muestra todos los personajes</li>
+    <li>Paginado de personajes</li>
     <li>Buscar por nombre</li>
-    <li>Filtrar por tipo</li>
+    <li>Filtrar por tipo de "Rarity"</li>
     <li>Ordenar de a-z y z-a</li>
     <li>Ingresar a la sección de descripcion.
         <ul>Donde se muestra:
-            <li>Información principal</li>
+            <li>Información principal del personaje</li>
             <li>Power Stars</li>
             <li>Gadgets</li>
             <li>Videos</li>
@@ -46,6 +47,8 @@
         <li>SASS</li>
         <li>JavaScript</li>
     </ul>
+    
+#### Api utilizada: [brawlapi.com](https://brawlapi.com/#/)
 
 <img src="https://media0.giphy.com/media/gLREPOkkRAGGCGNKbZ/giphy.gif?cid=ecf05e47eq5v1f29yzieccr39ruwx8dsgi2ijmrk0fbih3pu&rid=giphy.gif&ct=s" whidth = "100%">
 
