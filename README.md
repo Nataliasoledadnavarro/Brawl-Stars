@@ -30,7 +30,24 @@
 <img src="https://media0.giphy.com/media/gLREPOkkRAGGCGNKbZ/giphy.gif?cid=ecf05e47eq5v1f29yzieccr39ruwx8dsgi2ijmrk0fbih3pu&rid=giphy.gif&ct=s" whidth = "100%">
 
 
+<h3>Si querés clonar el proyecto:</h3>
+    <ul>
+        <li>Descarcar los archivos</li>
+        <li>Ejecutar en la consola el siguiente comando: **npm install**</li>
+    </ul>
 
+<img src="https://media0.giphy.com/media/gLREPOkkRAGGCGNKbZ/giphy.gif?cid=ecf05e47eq5v1f29yzieccr39ruwx8dsgi2ijmrk0fbih3pu&rid=giphy.gif&ct=s" whidth = "100%">
 
+<h3>Tecnologías:</h3>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>SASS</li>
+        <li>JavaScript</li>
+    </ul>
 
+<img src="https://media0.giphy.com/media/gLREPOkkRAGGCGNKbZ/giphy.gif?cid=ecf05e47eq5v1f29yzieccr39ruwx8dsgi2ijmrk0fbih3pu&rid=giphy.gif&ct=s" whidth = "100%">
 
+<P>Personalmente agradezco la libertad que nos dieron para realizar este trabajo. Fue muy especial para mi hacerlo porque fue un regalo para mi hijo y su amigo que juegan juntos al Brawl Stars. Trabaje en conjunto con ellos para indagar en la temática y que refleje lo que ellos querian ver. </P>
+
+## Hecho por (Naty Navarro)[https://www.linkedin.com/in/nataliasoledadnavarro/]
