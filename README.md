@@ -10,7 +10,6 @@
 
 <img src="https://media0.giphy.com/media/gLREPOkkRAGGCGNKbZ/giphy.gif?cid=ecf05e47eq5v1f29yzieccr39ruwx8dsgi2ijmrk0fbih3pu&rid=giphy.gif&ct=s" whidth = "100%">
 
-
 <h2>Funcionalidades del buscador:</h2>
 <ul>
     <li>Muestra todos los personajes</li>
@@ -29,7 +28,6 @@
 </ul>
 
 <img src="https://media0.giphy.com/media/gLREPOkkRAGGCGNKbZ/giphy.gif?cid=ecf05e47eq5v1f29yzieccr39ruwx8dsgi2ijmrk0fbih3pu&rid=giphy.gif&ct=s" whidth = "100%">
-
 
 <h3>Si querés clonar el proyecto:</h3>
     <ul>
