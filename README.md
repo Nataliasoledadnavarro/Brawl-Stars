@@ -32,7 +32,7 @@
 <h3>Si querés clonar el proyecto:</h3>
     <ul>
         <li>Descarcar los archivos</li>
-        <li>Ejecutar en la consola el siguiente comando: **npm install**</li>
+        <li>Ejecutar en la consola el siguiente comando: npm install</li>
     </ul>
 
 <img src="https://media0.giphy.com/media/gLREPOkkRAGGCGNKbZ/giphy.gif?cid=ecf05e47eq5v1f29yzieccr39ruwx8dsgi2ijmrk0fbih3pu&rid=giphy.gif&ct=s" whidth = "100%">
