@@ -135,7 +135,6 @@ const tarjetasBrawlersHtml = (data, pagina) => {
 
   contenedorBrawlers.innerHTML = html;
 };
-
 botonPrimeraPagina.onclick = () => {
   paginaActual = 0;
   mostrarBrawlers();
@@ -145,24 +144,26 @@ botonPaginaAnterior.onclick = () => {
   iconoProximaPagina.style.color = "white";
   if (paginaActual === 0) {
     iconoPaginaAnterior.style.color = "grey";
-    prev.disabled = true;
+    botonPaginaAnterior.disabled = true;
   } else {
     iconoProximaPagina.style.color = "white";
+    paginaActual = paginaActual - 10;
+    mostrarBrawlers();
+    botonProximaPagina.disabled = false;
   }
-
-  paginaActual = paginaActual - 10;
-  mostrarBrawlers();
 };
 
 botonProximaPagina.onclick = () => {
   if (paginaActual === 50) {
     iconoProximaPagina.style.color = "grey";
-    prev.disabled = true;
+    botonProximaPagina.disabled = true;
   } else {
     iconoPaginaAnterior.style.color = "white";
+    paginaActual = paginaActual + 10;
+    mostrarBrawlers();
+    botonPaginaAnterior.disabled = false;
   }
-  paginaActual = paginaActual + 10;
-  mostrarBrawlers();
+ 
 };
 
 botonUltimaPagina.onclick = () => {
