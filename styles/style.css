@@ -4,48 +4,56 @@
 .oscuro nav {
   border-bottom: solid 2px #706f6f;
 }
-.oscuro nav ul #boton-nav-brawlers {
+.oscuro nav .boton-hamburguesa i {
   color: white;
 }
-.oscuro nav ul #boton-modo img {
-  filter: drop-shadow(0px 0px 2px white);
-  background-color: rgba(255, 255, 255, 0.63);
-  border-radius: 10px;
-  padding: 3px;
+.oscuro nav .modal-menu {
+  background-color: rgba(87, 85, 85, 0.562);
 }
-.oscuro #formulario-busqueda #input-busqueda::placeholder {
+.oscuro nav .modal-menu .fa-window-close {
   color: white;
 }
-.oscuro #formulario-busqueda .contenedor-select label {
+.oscuro nav .modal-menu .buttons-nav li button {
+  background-color: rgba(87, 85, 85, 0.562);
   color: white;
 }
-.oscuro #formulario-busqueda .contenedor-select select {
+
+#formulario-busqueda #input-busqueda::placeholder {
+  color: white;
+}
+#formulario-busqueda .contenedor-select label {
+  color: white;
+}
+#formulario-busqueda .contenedor-select select {
   color: #706f6f;
 }
-.oscuro .tarjeta-brawler {
+
+.tarjeta-brawler {
   background-color: white;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
-.oscuro .tarjeta-brawler h3 {
+.tarjeta-brawler h3 {
   color: #312f2f;
 }
-.oscuro #descripcion .contenedor-principal {
+
+#descripcion .contenedor-principal {
   box-shadow: rgba(255, 255, 255, 0.336) 0px 5px 15px 0px;
   background-color: rgba(253, 251, 251, 0.808);
 }
-.oscuro #descripcion #seccion-star-powers {
+#descripcion #seccion-star-powers {
   box-shadow: rgba(255, 255, 255, 0.336) 0px 5px 15px 0px;
   background-color: rgba(253, 251, 251, 0.808);
 }
-.oscuro #descripcion #seccion-gadgets {
+#descripcion #seccion-gadgets {
   box-shadow: rgba(255, 255, 255, 0.336) 0px 5px 15px 0px;
   background-color: rgba(253, 251, 251, 0.808);
 }
-.oscuro #descripcion #seccion-videos {
+#descripcion #seccion-videos {
   box-shadow: rgba(255, 255, 255, 0.336) 0px 5px 15px 0px;
   background-color: rgba(253, 251, 251, 0.808);
 }
-.oscuro footer {
+
+footer {
   background-color: transparent;
   border-top: solid 2px #706f6f;
 }
@@ -106,34 +114,46 @@ nav .logo {
 nav img {
   width: 100%;
 }
-nav .buttons-nav {
-  width: 150px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-right: 30px;
+nav .boton-hamburguesa {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  margin-right: 15px;
 }
-nav .buttons-nav #boton-nav-brawlers {
+nav .boton-hamburguesa i {
+  color: #706f6f;
+  font-size: 24px;
+}
+nav .modal-menu {
   display: none;
-  background: transparent;
+  width: 200px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.753);
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  overflow: hidden;
+}
+nav .modal-menu .fa-window-close {
+  font-size: 22px;
+  margin: 10px;
+}
+nav .modal-menu .buttons-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+}
+nav .modal-menu .buttons-nav li button {
+  width: 100%;
+  background-color: white;
   border: none;
   color: #312f2f;
   font-family: "Teko", sans-serif;
-  font-size: 32px;
-  border-radius: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-nav .buttons-nav #boton-nav-brawlers:hover {
-  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
-}
-nav .buttons-nav #boton-modo {
-  width: 60px;
-  border: none;
-  background-color: transparent;
-}
-nav .buttons-nav #boton-modo img {
-  width: 100%;
+  font-size: 24px;
+  margin: 5px;
+  border-radius: 3px;
 }
 
 .seccion-principal-brawlers {

@@ -15,38 +15,41 @@ nav {
   img {
     width: 100%;
   }
- 
-
-.buttons-nav{
-  width: 150px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-right: 30px;
-  #boton-nav-brawlers {
-    display: none;
-    background: transparent;
+  .boton-hamburguesa{
+    width: 40px;
+    height: 40px;
     border: none;
-    color:$negro;
-    font-family: $font-titulo;
-    font-size: 32px;
-    border-radius: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    background-color: transparent;
+    margin-right: 15px;
+    i{
+      color: $gris;
+     font-size: 24px;
+    }
   }
 
-#boton-nav-brawlers:hover {
-  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
-    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
-}
-
-#boton-modo{
-  width: 60px;
-  border: none;
-  background-color: transparent;
-  img{
-      width: 100%
+  .modal-menu {
+    display: none;
+    width: 200px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.753);
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    overflow: hidden;
+    .fa-window-close {
+      font-size: 22px;
+      margin: 10px;
+    }
+    .buttons-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0;
+      li {
+        button {
+          @include boton-nav;
+        }
+      }
+    }
   }
-}
-}
 }

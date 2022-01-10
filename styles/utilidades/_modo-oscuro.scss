@@ -2,59 +2,65 @@
   background-image: url("../imagenes/fondo-oscuro.png");
   nav {
     border-bottom: solid 2px $gris;
-    ul {
-      #boton-nav-brawlers {
+    .boton-hamburguesa {
+      i {
         color: $blanco;
       }
-      #boton-modo {
-        img {
-          filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
-          background-color: rgba(255, 255, 255, 0.63);
-          border-radius: 10px;
-          padding: 3px;
+    }
+    .modal-menu {
+      background-color: rgba(87, 85, 85, 0.562);
+      .fa-window-close {
+        color: $blanco;
+      }
+      .buttons-nav {
+        li {
+          button {
+            background-color: rgba(87, 85, 85, 0.562);
+            color: $blanco;
+          }
         }
       }
     }
   }
-  #formulario-busqueda {
-    #input-busqueda::placeholder {
+}
+#formulario-busqueda {
+  #input-busqueda::placeholder {
+    color: $blanco;
+  }
+  .contenedor-select {
+    label {
       color: $blanco;
     }
-    .contenedor-select {
-      label {
-        color: $blanco;
-      }
-      select {
-        color: $gris;
-      }
+    select {
+      color: $gris;
     }
   }
-  .tarjeta-brawler {
-    background-color: $blanco;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    h3 {
-      color: $negro;
-    }
+}
+.tarjeta-brawler {
+  background-color: $blanco;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  h3 {
+    color: $negro;
   }
-  #descripcion {
-    .contenedor-principal {
-      @include box-oscuro;
-    }
-    #seccion-star-powers {
-      @include box-oscuro;
-    }
-    #seccion-gadgets {
-      @include box-oscuro;
-    }
-    #seccion-videos {
-      @include box-oscuro;
-    }
+}
+#descripcion {
+  .contenedor-principal {
+    @include box-oscuro;
   }
+  #seccion-star-powers {
+    @include box-oscuro;
+  }
+  #seccion-gadgets {
+    @include box-oscuro;
+  }
+  #seccion-videos {
+    @include box-oscuro;
+  }
+}
 
-  footer {
-    background-color: transparent;
-    border-top: solid 2px $gris;
-  }
+footer {
+  background-color: transparent;
+  border-top: solid 2px $gris;
 }

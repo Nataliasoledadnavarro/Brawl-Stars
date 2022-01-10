@@ -3,7 +3,12 @@ const body = document.querySelector("body");
 // Nav
 const nav = document.querySelector("nav");
 const botonNavBrawlers = document.getElementById("boton-nav-brawlers");
-const botonModo = document.getElementById("boton-modo");
+const botonModoOscuro = document.getElementById("boton-modo-oscuro");
+const botonModoJuego = document.getElementById("boton-modo-juego");
+const botonHamburguesa = document.querySelector(".boton-hamburguesa");
+const modalNav = document.querySelector(".modal-menu");
+const cerrarModalNav = document.querySelector(".cerrar-modal-nav");
+
 //Header
 const header = document.querySelector("header");
 
@@ -75,20 +80,30 @@ const mostrarSeccion = (array, seccion) => {
   }
 };
 
-// NAV
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                            NAV
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+botonHamburguesa.onclick = () => {
+  modalNav.style.display = "block" 
+  botonHamburguesa.style.display = "none"
+}
+cerrarModalNav.onclick = () => {
+  modalNav.style.display = "none" 
+  botonHamburguesa.style.display = "block"
+}
 botonNavBrawlers.onclick = (e) => {
   e.preventDefault();
   header.style.display = "block";
   nav.style.display = "flex";
   formularioBusqueda.style.display = "flex";
-  botonNavBrawlers.style.display = "none";
   mostrarSeccion(arraySecciones, seccionPrincipal);
 };
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                             MODO CLARO/OSCURO
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-botonModo.onclick = () => {
+botonModoOscuro.onclick = () => {
   body.classList.toggle("oscuro");
 };
 
@@ -257,7 +272,6 @@ const traerBrawler = () => {
 };
 
 const mostrarDescripcion = (personaje) => {
-  botonNavBrawlers.style.display = "block";
   header.style.display = "none";
   formularioBusqueda.style.display = "none";
   mostrarSeccion(arraySecciones, seccionDescripcion);
