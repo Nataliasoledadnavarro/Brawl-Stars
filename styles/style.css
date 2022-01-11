@@ -984,5 +984,111 @@ footer .body-footer .column-footer h2 {
     font-size: 12px;
   }
 }
+#seccion-modos-juego {
+  width: 60%;
+  max-width: 1400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
+#seccion-modos-juego h2 {
+  font-family: "Teko", sans-serif;
+  font-size: 42px;
+}
+#seccion-modos-juego .contenedor-modos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+#seccion-modos-juego .contenedor-modos .modo {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#seccion-modos-juego .contenedor-modos .modo p {
+  width: 100px;
+  text-align: center;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.959);
+  font-family: "Teko", sans-serif;
+  padding: 3px;
+  border-radius: 2px;
+}
+#seccion-modos-juego .contenedor-modos .modo img {
+  width: 100%;
+}
+#seccion-modos-juego .contenedor-modos .modo :hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
+
+.seccion-descripcion-modo {
+  width: 70%;
+  max-width: 1400px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: #312f2f;
+  font-family: "Roboto", sans-serif;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+.seccion-descripcion-modo h2 {
+  font-family: "Teko", sans-serif;
+  font-size: 50px;
+  color: #706f6f;
+  margin: 10px 0px 0px 15px;
+}
+.seccion-descripcion-modo .descripcion-modo {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #706f6f;
+  margin: 0px 0px 10px 15px;
+  font-weight: bolder;
+}
+.seccion-descripcion-modo .contenedor-nombre-modo {
+  display: flex;
+  align-items: center;
+}
+.seccion-descripcion-modo .contenedor-nombre-modo .contenedor-icono-modo {
+  width: 70px;
+  margin: 10px;
+}
+.seccion-descripcion-modo .contenedor-nombre-modo .contenedor-icono-modo img {
+  width: 100%;
+}
+.seccion-descripcion-modo .contenedor-nombre-modo .nombre-modo {
+  font-family: "Teko", sans-serif;
+  font-size: 36px;
+  margin: 0px 0px 0px 10px;
+  color: white;
+}
+
+@media screen and (max-width: 700px) {
+  .seccion-descripcion-modo {
+    width: 90%;
+  }
+
+  .seccion-descripcion-modo h2 {
+    font-family: "Teko", sans-serif;
+    font-size: 36px;
+  }
+  .seccion-descripcion-modo .descripcion-modo {
+    font-size: 12px;
+  }
+  .seccion-descripcion-modo .contenedor-nombre-modo .contenedor-icono-modo {
+    width: 50px;
+  }
+  .seccion-descripcion-modo .contenedor-nombre-modo .nombre-modo {
+    font-size: 24px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

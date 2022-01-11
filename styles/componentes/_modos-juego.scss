@@ -1,0 +1,103 @@
+#seccion-modos-juego {
+  width: 60%;
+  max-width: $max-whidth;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h2 {
+    font-family: $font-titulo;
+    font-size: 42px;
+  }
+  .contenedor-modos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 100px;
+    .modo {
+      width: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 5px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      p {
+        width: 100px;
+        text-align: center;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.959);
+        font-family: $font-titulo;
+        padding: 3px;
+        border-radius: 2px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .modo :hover {
+      transform: scale(1.1);
+      transition: all 0.3s;
+    }
+  }
+  display: none;
+}
+
+.seccion-descripcion-modo {
+  @include box;
+  flex-direction: column;
+
+  h2 {
+    font-family: $font-titulo;
+    font-size: 50px;
+    color: $gris;
+    margin: 10px 0px 0px 15px;
+  }
+  .descripcion-modo {
+    font-family: $font-textos-generales;
+    font-size: 18px;
+    color: $gris;
+    margin: 0px 0px 10px 15px;
+    font-weight: bolder;
+  }
+  .contenedor-nombre-modo {
+    display: flex;
+    align-items: center;
+    .contenedor-icono-modo {
+      width: 70px;
+      margin: 10px;
+      img {
+        width: 100%;
+      }
+    }
+    .nombre-modo {
+      font-family: $font-titulo;
+      font-size: 36px;
+      margin: 0px 0px 0px 10px;
+      color: $blanco;
+    }
+  }
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .seccion-descripcion-modo {
+    width: 90%;
+  }
+  .seccion-descripcion-modo {
+    h2 {
+      font-family: $font-titulo;
+      font-size: 36px;
+    }
+    .descripcion-modo {
+      font-size: 12px;
+    }
+    .contenedor-nombre-modo {
+      .contenedor-icono-modo {
+        width: 50px;
+      }
+      .nombre-modo {
+        font-size: 24px;
+      }
+    }
+  }
+}
