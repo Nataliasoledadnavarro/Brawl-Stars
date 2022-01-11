@@ -21,12 +21,21 @@
 <body>
   <nav>
     <div class="logo">
-      <img src="imagenes/Brawl-Stars-logo.png" alt="Logo Brawl Stars" />
+      <img src="imagenes/Brawl-Stars-logo .png" alt="Logo Brawl Stars" />
     </div>
-    <ul class="buttons-nav">
-      <li><button id="boton-nav-brawlers">Brawlers</button></li>
-      <li><button id="boton-modo"><img src="imagenes/modo.png" alt="Icono Brawl Star para activar o descactivar modo oscuro."></button></li>
-    </ul>
+
+    <button class="boton-hamburguesa" aria-label="Boton hamburquesa que despliega menu."><i
+        class="fas fa-bars"></i></button>
+
+    <aside class="modal-menu">
+      <i class="far fa-window-close cerrar-modal-nav"></i>
+      <ul class="buttons-nav">
+        <li><button id="boton-nav-brawlers">Brawlers</button></li>
+        <li><button id="boton-modo-oscuro">Modo oscuro/claro </button></li>
+        <li><button id="boton-modo-juego">Modos de juego </button></li>
+      </ul>
+    </aside>
+
 
   </nav>
   <header aria-label="Grupo de personajes de Brawl Stars"></header>
@@ -54,7 +63,7 @@
         <option value="a-z">A-Z</option>
         <option value="z-a">Z-A</option>
       </select>
-</div>
+    </div>
   </form>
   <div id="contenedor-modal" class="ocultar">
     <div id="modal-busqueda">
@@ -111,6 +120,21 @@
       <div id="contenedor-videos">
 
       </div>
+    </div>
+  </section>
+
+  <section id="seccion-modos-juego">
+    <h2>Modos de Juego</h2>
+    <div class="contenedor-modos">
+    </div>
+  </section>
+
+  <section class="seccion-descripcion-modo">
+    <h2 class = "titulo-descripcion-modo"></h2>
+    <p class="descripcion-modo"></p>
+    <div class="contenedor-nombre-modo">
+      <div class="contenedor-icono-modo"><img src="" alt="icono del modo" class="icono-modo"/></div>
+      <p class="nombre-modo"></p>
     </div>
   </section>
 

@@ -3,7 +3,12 @@ const body = document.querySelector("body");
 // Nav
 const nav = document.querySelector("nav");
 const botonNavBrawlers = document.getElementById("boton-nav-brawlers");
-const botonModo = document.getElementById("boton-modo");
+const botonModoOscuro = document.getElementById("boton-modo-oscuro");
+const botonModoJuego = document.getElementById("boton-modo-juego");
+const botonHamburguesa = document.querySelector(".boton-hamburguesa");
+const modalNav = document.querySelector(".modal-menu");
+const cerrarModalNav = document.querySelector(".cerrar-modal-nav");
+
 //Header
 const header = document.querySelector("header");
 
@@ -60,10 +65,28 @@ const contenedorItemsGadgets = document.getElementById(
 const seccionVideos = document.getElementById("seccion-videos");
 const contenedorVideos = document.getElementById("contenedor-videos");
 
+//Modos de juego
+const seccionModos = document.getElementById("seccion-modos-juego");
+const contenedorModos = document.querySelector(".contenedor-modos");
+const seccionDescripcionModo = document.querySelector(".seccion-descripcion-modo");
+const tituloDescripcionModo = document.querySelector(
+  ".titulo-descripcion-modo"
+);
+const descripcionModo = document.querySelector(".descripcion-modo");
+const nombreModo = document.querySelector(".nombre-modo");
+const iconoModo = document.querySelector(".icono-modo");
+const contenedorNombreModo = document.querySelector(".contenedor-nombre-modo");
+
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////
                                            MAQUETADO
 ///////////////////////////////////////////////////////////////////////////////////////////////////////*/
-const arraySecciones = [seccionPrincipal, seccionBusqueda, seccionDescripcion];
+const arraySecciones = [
+  seccionPrincipal,
+  seccionBusqueda,
+  seccionDescripcion,
+  seccionModos,
+  seccionDescripcionModo,
+];
 
 const mostrarSeccion = (array, seccion) => {
   for (let i = 0; i < array.length; i++) {
@@ -75,20 +98,30 @@ const mostrarSeccion = (array, seccion) => {
   }
 };
 
-// NAV
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                            NAV
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+botonHamburguesa.onclick = () => {
+  modalNav.style.display = "block";
+  botonHamburguesa.style.display = "none";
+};
+cerrarModalNav.onclick = () => {
+  modalNav.style.display = "none";
+  botonHamburguesa.style.display = "block";
+};
 botonNavBrawlers.onclick = (e) => {
   e.preventDefault();
   header.style.display = "block";
   nav.style.display = "flex";
   formularioBusqueda.style.display = "flex";
-  botonNavBrawlers.style.display = "none";
   mostrarSeccion(arraySecciones, seccionPrincipal);
 };
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                             MODO CLARO/OSCURO
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-botonModo.onclick = () => {
+botonModoOscuro.onclick = () => {
   body.classList.toggle("oscuro");
 };
 
@@ -179,7 +212,6 @@ botonUltimaPagina.onclick = () => {
   mostrarBrawlers();
 };
 
-
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                             BUSQUEDA DE BRAWLERS
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -257,7 +289,6 @@ const traerBrawler = () => {
 };
 
 const mostrarDescripcion = (personaje) => {
-  botonNavBrawlers.style.display = "block";
   header.style.display = "none";
   formularioBusqueda.style.display = "none";
   mostrarSeccion(arraySecciones, seccionDescripcion);
@@ -402,4 +433,69 @@ const ordenar = (data, value) => {
   }
 
   filtrarRarity(data, selectRarity.value);
+};
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                            MODOS DE JUEGO
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+botonModoJuego.onclick = () => {
+  mostrarSeccion(arraySecciones, seccionModos);
+  formularioBusqueda.style.display = "none";
+  traerModos();
+};
+
+const traerModos = () => {
+  fetch(`https://api.brawlapi.com/v1/gamemodes`)
+    .then((res) => res.json())
+    .then((data) => {
+      mostrarModos(data);
+      console.log(data)
+      buscarModo();
+    });
+};
+
+const mostrarModos = (data) => {
+  const dataFiltrada = data.list.filter((modo)=>{
+    return modo.name != "Training"
+  })
+ // Filtro este modo del array porque me rompía el codigo y no entraba para acceder a la información.
+ 
+  const html = dataFiltrada.reduce((acc, curr) => {
+    return (
+      acc +
+      `<div class="modo" data-id=${curr.id}>
+    <p class="nombre-modo" style="color:${curr.color};">${curr.name}"</p>
+    <img src="${curr.imageUrl2}" alt="" />
+  </div>`
+    );
+  }, "");
+
+  contenedorModos.innerHTML = html;
+};
+
+const buscarModo = () => {
+  const modos = document.querySelectorAll(".modo");
+
+  for (let i = 0; i < modos.length - 1; i++) {
+    modos[i].onclick = () => {
+      let id = modos[i].dataset.id;
+      Number(id);
+      fetch(`https://api.brawlapi.com/v1/gamemodes/${id}`)
+        .then((res) => res.json())
+        .then((data) => {
+          mostrarDescripcionModo(data);
+        });
+    };
+  }
+};
+
+const mostrarDescripcionModo = (data) => {
+  mostrarSeccion(arraySecciones, seccionDescripcionModo);
+  console.log(seccionDescripcionModo)
+  tituloDescripcionModo.textContent = data.title;
+  descripcionModo.textContent = data.description;
+  iconoModo.src = data.imageUrl;
+  nombreModo.textContent = data.name;
+  contenedorNombreModo.style.backgroundColor = data.color;
 };

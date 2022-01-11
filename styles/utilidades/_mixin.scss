@@ -18,6 +18,17 @@
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+@mixin boton-nav {
+width: 100%;
+background-color: $blanco;
+border: none;
+color:$negro;
+font-family: $font-titulo;
+font-size: 24px;
+margin: 5px;
+border-radius: 3px;
+}
+
 @mixin tag {
   display: flex;
   align-items: center;
