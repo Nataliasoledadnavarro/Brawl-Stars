@@ -76,7 +76,37 @@
       color: $blanco;
     }
   }
-  display: none;
+}
+
+.seccion-mapas{
+  margin-top: 30px;
+  h2{
+    font-family: $font-titulo;
+    font-size: 32px;
+    color: $blanco;
+    padding: 5px;
+    margin: 20px 0px 20px 0px;
+  }
+  div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .mapa{
+width: 150px;
+      p{
+        font-family: $font-textos-generales;
+        background-color: rgba(0, 0, 0, 0.534);
+        padding: 5px;
+        border-radius: 2px;
+        color: $blanco;
+        position: absolute;
+      }
+    .img-mapa{
+      width: 140px;
+      img{width: 100%;}
+    }
+  }
+  }
 }
 
 @media screen and (max-width: 700px) {
