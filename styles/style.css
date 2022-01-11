@@ -1038,7 +1038,6 @@ footer .body-footer .column-footer h2 {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   display: flex;
   flex-direction: column;
-  display: none;
 }
 .seccion-descripcion-modo h2 {
   font-family: "Teko", sans-serif;
@@ -1069,6 +1068,39 @@ footer .body-footer .column-footer h2 {
   font-size: 36px;
   margin: 0px 0px 0px 10px;
   color: white;
+}
+
+.seccion-mapas {
+  margin-top: 30px;
+}
+.seccion-mapas h2 {
+  font-family: "Teko", sans-serif;
+  font-size: 32px;
+  color: white;
+  padding: 5px;
+  margin: 20px 0px 20px 0px;
+}
+.seccion-mapas div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.seccion-mapas div .mapa {
+  width: 150px;
+}
+.seccion-mapas div .mapa p {
+  font-family: "Roboto", sans-serif;
+  background-color: rgba(0, 0, 0, 0.534);
+  padding: 5px;
+  border-radius: 2px;
+  color: white;
+  position: absolute;
+}
+.seccion-mapas div .mapa .img-mapa {
+  width: 140px;
+}
+.seccion-mapas div .mapa .img-mapa img {
+  width: 100%;
 }
 
 @media screen and (max-width: 700px) {

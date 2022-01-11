@@ -68,7 +68,9 @@ const contenedorVideos = document.getElementById("contenedor-videos");
 //Modos de juego
 const seccionModos = document.getElementById("seccion-modos-juego");
 const contenedorModos = document.querySelector(".contenedor-modos");
-const seccionDescripcionModo = document.querySelector(".seccion-descripcion-modo");
+const seccionDescripcionModo = document.querySelector(
+  ".seccion-descripcion-modo"
+);
 const tituloDescripcionModo = document.querySelector(
   ".titulo-descripcion-modo"
 );
@@ -76,6 +78,13 @@ const descripcionModo = document.querySelector(".descripcion-modo");
 const nombreModo = document.querySelector(".nombre-modo");
 const iconoModo = document.querySelector(".icono-modo");
 const contenedorNombreModo = document.querySelector(".contenedor-nombre-modo");
+
+//Mapas
+const contenedorMapas = document.querySelector(".contenedor-mapas");
+const contenedorMapasDisabled = document.querySelector(
+  ".contenedor-mapas-disabled"
+);
+const tituloDisabled = document.querySelector(".titulo-disabled");
 
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////
                                            MAQUETADO
@@ -450,17 +459,17 @@ const traerModos = () => {
     .then((res) => res.json())
     .then((data) => {
       mostrarModos(data);
-      console.log(data)
+      console.log(data);
       buscarModo();
     });
 };
 
 const mostrarModos = (data) => {
-  const dataFiltrada = data.list.filter((modo)=>{
-    return modo.name != "Training"
-  })
- // Filtro este modo del array porque me rompía el codigo y no entraba para acceder a la información.
- 
+  const dataFiltrada = data.list.filter((modo) => {
+    return modo.name != "Training";
+  });
+  // Filtro este modo del array porque me rompía el codigo y no entraba para acceder a la información.
+
   const html = dataFiltrada.reduce((acc, curr) => {
     return (
       acc +
@@ -492,10 +501,66 @@ const buscarModo = () => {
 
 const mostrarDescripcionModo = (data) => {
   mostrarSeccion(arraySecciones, seccionDescripcionModo);
-  console.log(seccionDescripcionModo)
+  console.log(seccionDescripcionModo);
   tituloDescripcionModo.textContent = data.title;
   descripcionModo.textContent = data.description;
   iconoModo.src = data.imageUrl;
   nombreModo.textContent = data.name;
   contenedorNombreModo.style.backgroundColor = data.color;
+  traerMapas(data);
+};
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                            MAPAS
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+const traerMapas = (dataModo) => {
+  fetch(`https://api.brawlapi.com/v1/maps`)
+    .then((res) => res.json())
+    .then((data) => {
+      mostrarMapas(data, dataModo);
+    });
+};
+
+const mostrarMapas = (mapas, modo) => {
+  const mapasDisabledTrue = mapas.list.filter((mapa) => {
+    return modo.id === mapa.gameMode.id && mapa.disabled === true;
+  });
+
+  const mapasDisabledFalse = mapas.list.filter((mapa) => {
+    return modo.id === mapa.gameMode.id && mapa.disabled === false;
+  });
+
+  if (mapasDisabledFalse.length > 0) {
+    const htmlMapas = mapasDisabledFalse.reduce((acc, curr) => {
+      return (acc =
+        acc + ` <div class="mapa">
+        <p>${curr.name}</p>
+        <div class="img-mapa">
+          <img src="${curr.imageUrl}"/>
+        </div>
+      </div>`)
+    }, "");
+    contenedorMapas.innerHTML = htmlMapas;
+  } else {
+    contenedorMapas.style.diplay = "none";
+  }
+console.log(mapasDisabledFalse)
+console.log(mapasDisabledTrue)
+  if (mapasDisabledTrue.length > 0) {
+    const htmlMapasDisabled = mapasDisabledTrue.reduce((acc, curr) => {
+      return (acc =
+        acc + ` <div class="mapa">
+                  <p>${curr.name}</p>
+                  <div class="img-mapa">
+                    <img src="${curr.imageUrl}"/>
+                  </div>
+                </div>`);
+    }, "");
+
+    contenedorMapasDisabled.innerHTML = htmlMapasDisabled;
+    tituloDisabled.style.backgroundColor = modo.color;
+  } else {
+    contenedorMapasDisabled.style.diplay = "none";
+  }
 };
