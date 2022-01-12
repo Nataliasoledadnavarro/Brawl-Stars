@@ -78,34 +78,38 @@
   }
 }
 
-.seccion-mapas{
+.seccion-mapas {
   margin-top: 30px;
-  h2{
+  h2 {
     font-family: $font-titulo;
     font-size: 32px;
     color: $blanco;
     padding: 5px;
+    padding-left: 10px;
     margin: 20px 0px 20px 0px;
   }
-  div{
+  div {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    .mapa{
-width: 150px;
-      p{
+    .mapa {
+      width: 150px;
+      p {
         font-family: $font-textos-generales;
+        font-size: 14px;
         background-color: rgba(0, 0, 0, 0.534);
         padding: 5px;
         border-radius: 2px;
         color: $blanco;
         position: absolute;
       }
-    .img-mapa{
-      width: 140px;
-      img{width: 100%;}
+      .img-mapa {
+        width: 140px;
+        img {
+          width: 100%;
+        }
+      }
     }
-  }
   }
 }
 
@@ -127,6 +131,19 @@ width: 150px;
       }
       .nombre-modo {
         font-size: 24px;
+      }
+    }
+  }
+
+  .seccion-mapas {
+    h2 {
+    font-size: 18px;  
+    }
+    div {
+      .mapa {
+        p {
+font-size: 12px;
+        }
       }
     }
   }
