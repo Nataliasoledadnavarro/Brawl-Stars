@@ -1078,6 +1078,7 @@ footer .body-footer .column-footer h2 {
   font-size: 32px;
   color: white;
   padding: 5px;
+  padding-left: 10px;
   margin: 20px 0px 20px 0px;
 }
 .seccion-mapas div {
@@ -1090,6 +1091,7 @@ footer .body-footer .column-footer h2 {
 }
 .seccion-mapas div .mapa p {
   font-family: "Roboto", sans-serif;
+  font-size: 14px;
   background-color: rgba(0, 0, 0, 0.534);
   padding: 5px;
   border-radius: 2px;
@@ -1120,6 +1122,13 @@ footer .body-footer .column-footer h2 {
   }
   .seccion-descripcion-modo .contenedor-nombre-modo .nombre-modo {
     font-size: 24px;
+  }
+
+  .seccion-mapas h2 {
+    font-size: 18px;
+  }
+  .seccion-mapas div .mapa p {
+    font-size: 12px;
   }
 }
 
