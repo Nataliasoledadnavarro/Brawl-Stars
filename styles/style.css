@@ -1112,6 +1112,10 @@ footer .body-footer .column-footer h2 {
 }
 
 @media screen and (max-width: 700px) {
+  #seccion-modos-juego h2 {
+    font-size: 36px;
+  }
+
   .seccion-descripcion-modo {
     width: 90%;
   }
