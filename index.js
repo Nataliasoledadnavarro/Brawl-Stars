@@ -26,6 +26,7 @@ const iconoPaginaAnterior = document.querySelector("#boton-pagina-anterior i");
 const botonProximaPagina = document.getElementById("boton-proxima-pagina");
 const iconoProximaPagina = document.querySelector("#boton-proxima-pagina i");
 const botonUltimaPagina = document.getElementById("boton-ultima-pagina");
+
 // Busqueda
 const inputBusqueda = document.getElementById("input-busqueda");
 const botonBuscar = document.getElementById("boton-buscar");
@@ -38,7 +39,7 @@ const selectOrden = document.getElementById("select-orden");
 const contenedorModalBusqueda = document.getElementById("contenedor-modal");
 const botonCerrarModal = document.getElementById("cerrar-modal");
 
-// Sección descripción.
+//Sección descripción.
 const seccionDescripcion = document.getElementById("descripcion");
 const contenedorImagenPrincipalDescripcion = document.querySelector(
   ".contenedor-img-principal-descripcion"
@@ -51,16 +52,18 @@ const claseNombre = document.getElementById("clase-nombre");
 const rarityDescripcion = document.getElementById("rarity-descripcion");
 const descripcion = document.getElementById("descripcion-principal");
 
-//star powers
+//Star powers
 const seccionStarPowers = document.getElementById("seccion-star-powers");
 const contenedorItemsStarPowers = document.getElementById(
   "contenedor-items-star-powers"
 );
-// Gadgets
+
+//Gadgets
 const seccionGadgets = document.getElementById("seccion-gadgets");
 const contenedorItemsGadgets = document.getElementById(
   "contenedor-items-gadgets"
 );
+
 //Videos
 const seccionVideos = document.getElementById("seccion-videos");
 const contenedorVideos = document.getElementById("contenedor-videos");
@@ -108,7 +111,7 @@ const mostrarSeccion = (array, seccion) => {
 };
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                                            NAV
+                                                    NAV
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 botonHamburguesa.onclick = () => {
@@ -135,7 +138,7 @@ botonModoOscuro.onclick = () => {
 };
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                                                  FETCH PRINCIPAL
+                                             FETCH PRINCIPAL
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 const mostrarBrawlers = () => {
@@ -229,7 +232,7 @@ const capitalizar = (str) => {
   return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 };
 
-const mostrarBusqueda = (data) => {
+const mostrarBusqueda = () => {
   fetch(`https://api.brawlapi.com/v1/brawlers`)
     .then((res) => res.json())
     .then((data) => {
@@ -287,7 +290,6 @@ const traerBrawler = () => {
       fetch(`https://api.brawlapi.com/v1/brawlers/${id}`)
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
           mostrarDescripcion(data);
           mostrarStarPowers(data);
           mostrarGadgets(data);
@@ -459,7 +461,6 @@ const traerModos = () => {
     .then((res) => res.json())
     .then((data) => {
       mostrarModos(data);
-      console.log(data);
       buscarModo();
     });
 };
@@ -501,7 +502,6 @@ const buscarModo = () => {
 
 const mostrarDescripcionModo = (data) => {
   mostrarSeccion(arraySecciones, seccionDescripcionModo);
-  console.log(seccionDescripcionModo);
   tituloDescripcionModo.textContent = data.title;
   descripcionModo.textContent = data.description;
   iconoModo.src = data.imageUrl;
@@ -534,23 +534,23 @@ const mostrarMapas = (mapas, modo) => {
   if (mapasDisabledFalse.length > 0) {
     const htmlMapas = mapasDisabledFalse.reduce((acc, curr) => {
       return (acc =
-        acc + ` <div class="mapa">
+        acc +
+        ` <div class="mapa">
         <p>${curr.name}</p>
         <div class="img-mapa">
           <img src="${curr.imageUrl}"/>
         </div>
-      </div>`)
+      </div>`);
     }, "");
     contenedorMapas.innerHTML = htmlMapas;
   } else {
     contenedorMapas.style.diplay = "none";
   }
-console.log(mapasDisabledFalse)
-console.log(mapasDisabledTrue)
   if (mapasDisabledTrue.length > 0) {
     const htmlMapasDisabled = mapasDisabledTrue.reduce((acc, curr) => {
       return (acc =
-        acc + ` <div class="mapa">
+        acc +
+        ` <div class="mapa">
                   <p>${curr.name}</p>
                   <div class="img-mapa">
                     <img src="${curr.imageUrl}"/>
