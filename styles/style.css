@@ -17,43 +17,48 @@
   background-color: rgba(87, 85, 85, 0.562);
   color: white;
 }
-
-#formulario-busqueda #input-busqueda::placeholder {
+.oscuro #formulario-busqueda #input-busqueda::placeholder {
   color: white;
 }
-#formulario-busqueda .contenedor-select label {
+.oscuro #formulario-busqueda .contenedor-select label {
   color: white;
 }
-#formulario-busqueda .contenedor-select select {
-  color: #706f6f;
+.oscuro #formulario-busqueda .contenedor-select select {
+  color: #b8afaf;
 }
-
-.tarjeta-brawler {
+.oscuro .tarjeta-brawler {
   background-color: white;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
-.tarjeta-brawler h3 {
+.oscuro .tarjeta-brawler h3 {
   color: #312f2f;
 }
-
-#descripcion .contenedor-principal {
+.oscuro #descripcion .contenedor-principal {
   box-shadow: rgba(255, 255, 255, 0.336) 0px 5px 15px 0px;
   background-color: rgba(253, 251, 251, 0.808);
 }
-#descripcion #seccion-star-powers {
+.oscuro #descripcion #seccion-star-powers {
   box-shadow: rgba(255, 255, 255, 0.336) 0px 5px 15px 0px;
   background-color: rgba(253, 251, 251, 0.808);
 }
-#descripcion #seccion-gadgets {
+.oscuro #descripcion #seccion-gadgets {
   box-shadow: rgba(255, 255, 255, 0.336) 0px 5px 15px 0px;
   background-color: rgba(253, 251, 251, 0.808);
 }
-#descripcion #seccion-videos {
+.oscuro #descripcion #seccion-videos {
   box-shadow: rgba(255, 255, 255, 0.336) 0px 5px 15px 0px;
   background-color: rgba(253, 251, 251, 0.808);
 }
-
-footer {
+.oscuro #seccion-modos-juego h2 {
+  color: white;
+}
+.oscuro .seccion-descripcion-modo h2 {
+  color: white;
+}
+.oscuro .seccion-descripcion-modo .descripcion-modo {
+  color: white;
+}
+.oscuro footer {
   background-color: transparent;
   border-top: solid 2px #706f6f;
 }
@@ -1038,6 +1043,7 @@ footer .body-footer .column-footer h2 {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   display: flex;
   flex-direction: column;
+  display: none;
 }
 .seccion-descripcion-modo h2 {
   font-family: "Teko", sans-serif;
