@@ -45,7 +45,7 @@
 .seccion-descripcion-modo {
   @include box;
   flex-direction: column;
-
+ 
   h2 {
     font-family: $font-titulo;
     font-size: 50px;
@@ -76,6 +76,7 @@
       color: $blanco;
     }
   }
+  display: none;
 }
 
 .seccion-mapas {

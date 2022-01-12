@@ -22,7 +22,7 @@
       }
     }
   }
-}
+
 #formulario-busqueda {
   #input-busqueda::placeholder {
     color: $blanco;
@@ -32,7 +32,7 @@
       color: $blanco;
     }
     select {
-      color: $gris;
+      color: rgb(184, 175, 175);
     }
   }
 }
@@ -59,8 +59,20 @@
     @include box-oscuro;
   }
 }
+#seccion-modos-juego {
+  h2{color: $blanco;}
+}
+.seccion-descripcion-modo {
+  h2 {
+    color: $blanco;
+  }
+  .descripcion-modo {
+    color: $blanco;
+  }
+}
 
 footer {
   background-color: transparent;
   border-top: solid 2px $gris;
+}
 }
