@@ -45,7 +45,7 @@
 .seccion-descripcion-modo {
   @include box;
   flex-direction: column;
- 
+
   h2 {
     font-family: $font-titulo;
     font-size: 50px;
@@ -115,6 +115,11 @@
 }
 
 @media screen and (max-width: 700px) {
+  #seccion-modos-juego {
+    h2 {
+      font-size: 36px;
+    }
+  }
   .seccion-descripcion-modo {
     width: 90%;
   }
@@ -138,12 +143,12 @@
 
   .seccion-mapas {
     h2 {
-    font-size: 18px;  
+      font-size: 18px;
     }
     div {
       .mapa {
         p {
-font-size: 12px;
+          font-size: 12px;
         }
       }
     }
