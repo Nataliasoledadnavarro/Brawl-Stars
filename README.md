@@ -36,7 +36,7 @@
 
 <h3>Si querés clonar el proyecto:</h3>
     <ul>
-        <li>Descargcar los archivos</li>
+        <li>Descargar los archivos</li>
         <li>Ejecutar en la consola el siguiente comando: npm install</li>
     </ul>
 
@@ -44,10 +44,11 @@
 
 <h3>Tecnologías:</h3>
     <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>SASS</li>
-        <li>JavaScript</li>
+        <li><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </li>
+        <li><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/></li>
+        <li><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="sass" width="40" height="40"/></li>
+        <li><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="30" height="30"/> </li>
+        <li> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="30" height="30"/></li>
     </ul>
     
 #### Api utilizada: [brawlapi.com](https://brawlapi.com/#/)

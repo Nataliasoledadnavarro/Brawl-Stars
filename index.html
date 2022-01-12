@@ -27,131 +27,140 @@
     <button class="boton-hamburguesa" aria-label="Boton hamburquesa que despliega menu."><i
         class="fas fa-bars"></i></button>
 
+    <!--Aside oculto-->
     <aside class="modal-menu">
       <i class="far fa-window-close cerrar-modal-nav"></i>
       <ul class="buttons-nav">
         <li><button id="boton-nav-brawlers">Brawlers</button></li>
         <li><button id="boton-modo-juego">Modos de juego </button></li>
         <li><button id="boton-modo-oscuro">Modo oscuro/claro </button></li>
-        
       </ul>
     </aside>
-
-
   </nav>
   <header aria-label="Grupo de personajes de Brawl Stars"></header>
-  <form id="formulario-busqueda">
-    <label for="input-busqueda"></label>
-    <input type="text" id="input-busqueda" placeholder=" ¡Ingresá el nombre y encontrá tu Brawler!" />
-    <button id="boton-buscar">Buscar</button>
+  <main>
+    <!--Formulario de busqueda-->
+    <form id="formulario-busqueda">
+      <label for="input-busqueda"></label>
+      <input type="text" id="input-busqueda" placeholder=" ¡Ingresá el nombre y encontrá tu Brawler!" />
+      <button id="boton-buscar">Buscar</button>
 
-    <div class="contenedor-select">
-      <label>Rarity </label>
-      <select id="select-rarity">
-        <option value="Todos">Todos</option>
-        <option value="Chromatic">Chromatic</option>
-        <option value="Trophy Road">Trophy Road</option>
-        <option value="Rare">Rare</option>
-        <option value="Super Rare">Super Rare</option>
-        <option value="Epic">Epic</option>
-        <option value="Mythic">Mythic</option>
-        <option value="Legendary">Legendary</option>
-      </select>
+      <div class="contenedor-select">
+        <label>Rarity </label>
+        <select id="select-rarity">
+          <option value="Todos">Todos</option>
+          <option value="Chromatic">Chromatic</option>
+          <option value="Trophy Road">Trophy Road</option>
+          <option value="Rare">Rare</option>
+          <option value="Super Rare">Super Rare</option>
+          <option value="Epic">Epic</option>
+          <option value="Mythic">Mythic</option>
+          <option value="Legendary">Legendary</option>
+        </select>
 
-      <label>Orden</label>
-      <select id="select-orden">
-        <option value="aleatorio">Aleatorio</option>
-        <option value="a-z">A-Z</option>
-        <option value="z-a">Z-A</option>
-      </select>
-    </div>
-  </form>
-  <div id="contenedor-modal" class="ocultar">
-    <div id="modal-busqueda">
-      <div class="contenedor-img-busqueda"><img src="imagenes/busqueda.jpg" alt="Brawler Carl"></div>
-      <h2>Brawler no encontrado</h2>
-      <p class="subtitulo">¡Intentalo de nuevo!</p>
-      <p>Si continúa sin aparecer es porque estamos trabajando en la actualización.</p>
-      <button id="cerrar-modal" aria-label="Boton cerrar"><i class="fas fa-times"></i></button>
-    </div>
-  </div>
-
-  <section id="seccion-busqueda">
-  </section>
-
-  <section class="seccion-principal-brawlers">
-    <div class="contenedor-tarjetas-brawlers"></div>
-    <div class="paginado">
-      <button id="boton-primera-pagina"><i class="fas fa-angle-double-left"></i></button>
-      <button id="boton-pagina-anterior"><i class="fas fa-angle-left"></i></button>
-      <button id="boton-proxima-pagina"><i class="fas fa-angle-right"></i></button>
-      <button id="boton-ultima-pagina"><i class="fas fa-angle-double-right"></i></button>
-    </div>
-  </section>
-
-  <section id="descripcion">
-    <div class="contenedor-principal">
-      <div class="contenedor-img-principal-descripcion">
-        <img src="" class="img-principal-descripcion" alt="imagen principal del brawler seleccionado">
+        <label>Orden</label>
+        <select id="select-orden">
+          <option value="aleatorio">Aleatorio</option>
+          <option value="a-z">A-Z</option>
+          <option value="z-a">Z-A</option>
+        </select>
       </div>
-      <div class="info-principal-descripcion">
-        <h2 id="nombre-descripcion"></h2>
-        <p id="clase-nombre"></p>
-        <p id="rarity-descripcion"></p>
-        <p id="descripcion-principal"></p>
+    </form>
+    <!--Modal buqueda no encontrada-->
+    <div id="contenedor-modal" class="ocultar">
+      <div id="modal-busqueda">
+        <div class="contenedor-img-busqueda"><img src="imagenes/busqueda.jpg" alt="Brawler Carl"></div>
+        <h2>Brawler no encontrado</h2>
+        <p class="subtitulo">¡Intentalo de nuevo!</p>
+        <p>Si continúa sin aparecer es porque estamos trabajando en la actualización.</p>
+        <button id="cerrar-modal" aria-label="Boton cerrar"><i class="fas fa-times"></i></button>
       </div>
     </div>
 
-    <div id="seccion-star-powers">
-      <h2>Star Powers</h2>
-      <div id="contenedor-items-star-powers">
+    <!--Resultados de la buqueda-->
+    <section id="seccion-busqueda">
+    </section>
 
+    <!--Sección principal que muestra todos los Brawlers-->
+    <section class="seccion-principal-brawlers">
+      <div class="contenedor-tarjetas-brawlers"></div>
+      <div class="paginado">
+        <button id="boton-primera-pagina"><i class="fas fa-angle-double-left"></i></button>
+        <button id="boton-pagina-anterior"><i class="fas fa-angle-left"></i></button>
+        <button id="boton-proxima-pagina"><i class="fas fa-angle-right"></i></button>
+        <button id="boton-ultima-pagina"><i class="fas fa-angle-double-right"></i></button>
       </div>
-    </div>
+    </section>
 
-    <div id="seccion-gadgets">
-      <h2>Gadgets</h2>
-      <div id="contenedor-items-gadgets">
-
+    <!--Descripción del Brawler-->
+    <section id="descripcion">
+      <div class="contenedor-principal">
+        <div class="contenedor-img-principal-descripcion">
+          <img src="" class="img-principal-descripcion" alt="imagen principal del brawler seleccionado">
+        </div>
+        <div class="info-principal-descripcion">
+          <h2 id="nombre-descripcion"></h2>
+          <p id="clase-nombre"></p>
+          <p id="rarity-descripcion"></p>
+          <p id="descripcion-principal"></p>
+        </div>
       </div>
-    </div>
 
-    <div id="seccion-videos">
-      <h2>Videos</h2>
-      <div id="contenedor-videos">
-
+      <!--Star Powers-->
+      <div id="seccion-star-powers">
+        <h2>Star Powers</h2>
+        <div id="contenedor-items-star-powers">
+        </div>
       </div>
-    </div>
-  </section>
 
-  <section id="seccion-modos-juego">
-    <h2>Modos de Juego</h2>
-    <div class="contenedor-modos">
-    </div>
-  </section>
-
-  <section class="seccion-descripcion-modo">
-    <h2 class = "titulo-descripcion-modo"></h2>
-    <p class="descripcion-modo"></p>
-    <div class="contenedor-nombre-modo">
-      <div class="contenedor-icono-modo"><img src="" alt="icono del modo" class="icono-modo"/></div>
-      <p class="nombre-modo"></p>
-    </div>
-
-    <div class="seccion-mapas">
-      <div class="contenedor-mapas">
+      <!--Gadgets-->
+      <div id="seccion-gadgets">
+        <h2>Gadgets</h2>
+        <div id="contenedor-items-gadgets">
+        </div>
       </div>
-    </div>
 
-    <div class="seccion-mapas">
-      <h2 class="titulo-disabled">Disabled Maps</h2>
-      <div class="contenedor-mapas-disabled">
+      <!--Videos-->
+      <div id="seccion-videos">
+        <h2>Videos</h2>
+        <div id="contenedor-videos">
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
+    <!-- Listado modos de juego-->
+    <section id="seccion-modos-juego">
+      <h2>Modos de Juego</h2>
+      <div class="contenedor-modos">
+      </div>
+    </section>
+
+    <!--Sección descripción del modo-->
+    <section class="seccion-descripcion-modo">
+      <h2 class="titulo-descripcion-modo"></h2>
+      <p class="descripcion-modo"></p>
+      <div class="contenedor-nombre-modo">
+        <div class="contenedor-icono-modo"><img src="" alt="icono del modo" class="icono-modo" /></div>
+        <p class="nombre-modo"></p>
+      </div>
+
+      <!--Mapas-->
+      <div class="seccion-mapas">
+        <div class="contenedor-mapas">
+        </div>
+      </div>
+
+       <!--Mapas disabled-->
+      <div class="seccion-mapas">
+        <h2 class="titulo-disabled">Disabled Maps</h2>
+        <div class="contenedor-mapas-disabled">
+        </div>
+      </div>
+    </section>
+  </main>
   <footer>
     <div class="body-footer">
+      <!--Información-->
       <div class="column-footer">
         <h2>Buscador de Brawl Stars</h2>
         <p>Este proyecto lo llevé adelante inspirada y acompañada por:</p>
@@ -160,7 +169,7 @@
           <li class="tag"> <img src="imagenes/8bit.png" alt="Imagen de 8-bit">Alejo</li>
         </ul>
       </div>
-
+      <!--Contacto-->
       <div class="column-footer">
         <h2>Contactame!</h2>
         <ul>
@@ -175,6 +184,8 @@
         </ul>
       </div>
     </div>
+
+    <!--Tag personal y API-->
     <div class="footer-footer">
       <ul>Hecho por:
         <a href="https://www.linkedin.com/in/nataliasoledadnavarro/">
@@ -188,7 +199,6 @@
       </ul>
     </div>
   </footer>
-
   <script src="index.js"></script>
 </body>
 
