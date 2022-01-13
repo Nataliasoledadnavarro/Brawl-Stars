@@ -564,3 +564,4 @@ const mostrarMapas = (mapas, modo) => {
     contenedorMapasDisabled.style.diplay = "none";
   }
 };
+
