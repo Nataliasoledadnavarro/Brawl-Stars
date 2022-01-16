@@ -236,6 +236,7 @@ const mostrarBusqueda = () => {
   fetch(`https://api.brawlapi.com/v1/brawlers`)
     .then((res) => res.json())
     .then((data) => {
+      console.log(data)
       let resultado = data.list.find((objeto) => {
         return objeto.name === capitalizar(inputBusqueda.value);
       });
@@ -247,7 +248,10 @@ const mostrarBusqueda = () => {
         inputBusqueda.value === "8-Bit" ||
         inputBusqueda.value === "8Bit"
       ) {
-        resultado = data.list[24];
+        const busqueda8Bit = data.list.filter((personaje)=>{
+          return personaje.id === 16000027
+        }) 
+        resultado = busqueda8Bit[0]
       }
 
       if (resultado != undefined) {

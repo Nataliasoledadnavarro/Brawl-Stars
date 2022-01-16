@@ -6,6 +6,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: solid 1px $gris;
   .logo {
     width: 120px;
     display: flex;

@@ -116,6 +116,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: solid 1px #706f6f;
 }
 nav .logo {
   width: 120px;
@@ -462,7 +463,6 @@ nav .modal-menu .buttons-nav li button {
 }
 footer {
   width: 100%;
-  max-width: 1400px;
   display: flex;
   flex-direction: column;
   background-color: #312f2f;
@@ -769,6 +769,7 @@ footer .body-footer .column-footer h2 {
 }
 #contenedor-modal {
   position: fixed;
+  top: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(128, 128, 128, 0.541);
@@ -822,7 +823,6 @@ footer .body-footer .column-footer h2 {
 
 footer {
   width: 100%;
-  max-width: 1400px;
   display: flex;
   flex-direction: column;
   background-color: #312f2f;
