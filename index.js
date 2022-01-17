@@ -236,7 +236,7 @@ const mostrarBusqueda = () => {
   fetch(`https://api.brawlapi.com/v1/brawlers`)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data)
+      console.log(data);
       let resultado = data.list.find((objeto) => {
         return objeto.name === capitalizar(inputBusqueda.value);
       });
@@ -248,10 +248,10 @@ const mostrarBusqueda = () => {
         inputBusqueda.value === "8-Bit" ||
         inputBusqueda.value === "8Bit"
       ) {
-        const busqueda8Bit = data.list.filter((personaje)=>{
-          return personaje.id === 16000027
-        }) 
-        resultado = busqueda8Bit[0]
+        const busqueda8Bit = data.list.filter((personaje) => {
+          return personaje.id === 16000027;
+        });
+        resultado = busqueda8Bit[0];
       }
 
       if (resultado != undefined) {
@@ -377,7 +377,7 @@ const mostrarVideos = (personaje) => {
       );
     }, "");
     contenedorVideos.innerHTML = html;
-  } else{
+  } else {
     seccionVideos.style.display = "none";
   }
 };
@@ -501,6 +501,7 @@ const buscarModo = () => {
         .then((res) => res.json())
         .then((data) => {
           mostrarDescripcionModo(data);
+          console.log(data)
         });
     };
   }
@@ -550,7 +551,7 @@ const mostrarMapas = (mapas, modo) => {
     }, "");
     contenedorMapas.innerHTML = htmlMapas;
   } else {
-    contenedorMapas.style.diplay = "none";
+    contenedorMapas.innerHTML = "";
   }
   if (mapasDisabledTrue.length > 0) {
     const htmlMapasDisabled = mapasDisabledTrue.reduce((acc, curr) => {
@@ -567,7 +568,6 @@ const mostrarMapas = (mapas, modo) => {
     contenedorMapasDisabled.innerHTML = htmlMapasDisabled;
     tituloDisabled.style.backgroundColor = modo.color;
   } else {
-    contenedorMapasDisabled.style.diplay = "none";
+    contenedorMapasDisabled.innerHTML = "";
   }
 };
-
