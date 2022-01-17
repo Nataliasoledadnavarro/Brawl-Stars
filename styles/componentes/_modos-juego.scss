@@ -53,7 +53,8 @@
     color: $gris;
     margin: 10px 0px 0px 15px;
   }
-  .descripcion-modo {
+  .descripcion-modo, .tutorial-modo {
+    width: 95%;
     font-family: $font-textos-generales;
     font-size: 18px;
     color: $gris;
@@ -97,13 +98,15 @@
     .mapa {
       width: 150px;
       p {
+        width: 90px;
+        position: absolute;
         font-family: $font-textos-generales;
-        font-size: 14px;
+        font-size: 12px;
         background-color: rgba(0, 0, 0, 0.534);
         padding: 5px;
         border-radius: 2px;
         color: $blanco;
-        position: absolute;
+        text-align: center;
       }
       .img-mapa {
         width: 140px;
@@ -129,7 +132,7 @@
       font-family: $font-titulo;
       font-size: 36px;
     }
-    .descripcion-modo {
+    .descripcion-modo, .tutorial-modo {
       font-size: 12px;
     }
     .contenedor-nombre-modo {

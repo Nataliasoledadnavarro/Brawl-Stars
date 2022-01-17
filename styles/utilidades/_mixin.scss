@@ -110,6 +110,7 @@ background-color: transparent;
 color: red;
 border-bottom: solid 1px $gris;
 margin-right: 15px;
+width: 100px;
 }
 
 @mixin item($textShadow:0px 0px 5px rgba(252, 227, 6, 0.46)){

@@ -55,6 +55,7 @@ footer {
   background-image: url("../imagenes/fondo.png");
   color: $negro;
   ul {
+    color: $blanco;
     width: 40%;
     display: flex;
     align-items: center;
@@ -92,7 +93,7 @@ footer {
       ul {
        width: 100%;
        flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         font-size: 14px;
         .tag {
           @include tag-pequeño;

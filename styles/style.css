@@ -533,6 +533,7 @@ footer .body-footer .column-footer h2 {
   color: #312f2f;
 }
 .footer-footer ul {
+  color: white;
   width: 40%;
   display: flex;
   align-items: center;
@@ -605,7 +606,7 @@ footer .body-footer .column-footer h2 {
   footer .footer-footer ul {
     width: 100%;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     font-size: 14px;
   }
   footer .footer-footer ul .tag {
@@ -661,7 +662,7 @@ footer .body-footer .column-footer h2 {
 }
 
 #formulario-busqueda {
-  width: 80%;
+  width: 95%;
   height: 150px;
   margin-top: 30px;
   display: flex;
@@ -708,6 +709,7 @@ footer .body-footer .column-footer h2 {
   font-weight: 800;
   color: #706f6f;
   margin-right: 5px;
+  margin-left: 10px;
 }
 .contenedor-select select {
   height: 30px;
@@ -716,6 +718,7 @@ footer .body-footer .column-footer h2 {
   color: red;
   border-bottom: solid 1px #706f6f;
   margin-right: 15px;
+  width: 100px;
 }
 
 @media screen and (max-width: 800px) {
@@ -735,7 +738,7 @@ footer .body-footer .column-footer h2 {
     background-image: linear-gradient(#d60000 0%, #fc3737 51%, #fa8e8e 100%);
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
   #formulario-busqueda {
     flex-wrap: wrap;
     align-items: flex-start;
@@ -893,6 +896,7 @@ footer .body-footer .column-footer h2 {
   color: #312f2f;
 }
 .footer-footer ul {
+  color: white;
   width: 40%;
   display: flex;
   align-items: center;
@@ -965,7 +969,7 @@ footer .body-footer .column-footer h2 {
   footer .footer-footer ul {
     width: 100%;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     font-size: 14px;
   }
   footer .footer-footer ul .tag {
@@ -1058,7 +1062,8 @@ footer .body-footer .column-footer h2 {
   color: #706f6f;
   margin: 10px 0px 0px 15px;
 }
-.seccion-descripcion-modo .descripcion-modo {
+.seccion-descripcion-modo .descripcion-modo, .seccion-descripcion-modo .tutorial-modo {
+  width: 95%;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   color: #706f6f;
@@ -1103,13 +1108,15 @@ footer .body-footer .column-footer h2 {
   width: 150px;
 }
 .seccion-mapas div .mapa p {
+  width: 90px;
+  position: absolute;
   font-family: "Roboto", sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   background-color: rgba(0, 0, 0, 0.534);
   padding: 5px;
   border-radius: 2px;
   color: white;
-  position: absolute;
+  text-align: center;
 }
 .seccion-mapas div .mapa .img-mapa {
   width: 140px;
@@ -1131,7 +1138,7 @@ footer .body-footer .column-footer h2 {
     font-family: "Teko", sans-serif;
     font-size: 36px;
   }
-  .seccion-descripcion-modo .descripcion-modo {
+  .seccion-descripcion-modo .descripcion-modo, .seccion-descripcion-modo .tutorial-modo {
     font-size: 12px;
   }
   .seccion-descripcion-modo .contenedor-nombre-modo .contenedor-icono-modo {
