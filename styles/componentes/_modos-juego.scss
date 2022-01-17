@@ -97,13 +97,15 @@
     .mapa {
       width: 150px;
       p {
+        width: 90px;
+        position: absolute;
         font-family: $font-textos-generales;
-        font-size: 14px;
+        font-size: 12px;
         background-color: rgba(0, 0, 0, 0.534);
         padding: 5px;
         border-radius: 2px;
         color: $blanco;
-        position: absolute;
+        text-align: center;
       }
       .img-mapa {
         width: 140px;
