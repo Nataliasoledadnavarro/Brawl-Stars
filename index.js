@@ -237,7 +237,6 @@ const mostrarBusqueda = () => {
   fetch(`https://api.brawlapi.com/v1/brawlers`)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
       let resultado = data.list.find((objeto) => {
         return objeto.name === capitalizar(inputBusqueda.value);
       });
@@ -502,7 +501,6 @@ const buscarModo = () => {
         .then((res) => res.json())
         .then((data) => {
           mostrarDescripcionModo(data);
-          console.log(data);
         });
     };
   }
@@ -539,9 +537,6 @@ const mostrarMapas = (mapas, modo) => {
   const mapasDisabledFalse = mapas.list.filter((mapa) => {
     return modo.id === mapa.gameMode.id && mapa.disabled === false;
   });
-
-  console.log(mapasDisabledTrue)
-  console.log(mapasDisabledFalse)
 
   if (mapasDisabledFalse.length > 0) {
     const htmlMapas = mapasDisabledFalse.reduce((acc, curr) => {
