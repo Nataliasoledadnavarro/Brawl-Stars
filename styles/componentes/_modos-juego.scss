@@ -53,7 +53,8 @@
     color: $gris;
     margin: 10px 0px 0px 15px;
   }
-  .descripcion-modo {
+  .descripcion-modo, .tutorial-modo {
+    width: 95%;
     font-family: $font-textos-generales;
     font-size: 18px;
     color: $gris;
@@ -131,7 +132,7 @@
       font-family: $font-titulo;
       font-size: 36px;
     }
-    .descripcion-modo {
+    .descripcion-modo, .tutorial-modo {
       font-size: 12px;
     }
     .contenedor-nombre-modo {

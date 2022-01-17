@@ -81,6 +81,7 @@ const descripcionModo = document.querySelector(".descripcion-modo");
 const nombreModo = document.querySelector(".nombre-modo");
 const iconoModo = document.querySelector(".icono-modo");
 const contenedorNombreModo = document.querySelector(".contenedor-nombre-modo");
+const tutorialModo = document.querySelector(".tutorial-modo");
 
 //Mapas
 const contenedorMapas = document.querySelector(".contenedor-mapas");
@@ -501,7 +502,7 @@ const buscarModo = () => {
         .then((res) => res.json())
         .then((data) => {
           mostrarDescripcionModo(data);
-          console.log(data)
+          console.log(data);
         });
     };
   }
@@ -511,6 +512,7 @@ const mostrarDescripcionModo = (data) => {
   mostrarSeccion(arraySecciones, seccionDescripcionModo);
   tituloDescripcionModo.textContent = data.title;
   descripcionModo.textContent = data.description;
+  tutorialModo.textContent = data.tutorial;
   iconoModo.src = data.imageUrl;
   nombreModo.textContent = data.name;
   contenedorNombreModo.style.backgroundColor = data.color;
@@ -537,6 +539,9 @@ const mostrarMapas = (mapas, modo) => {
   const mapasDisabledFalse = mapas.list.filter((mapa) => {
     return modo.id === mapa.gameMode.id && mapa.disabled === false;
   });
+
+  console.log(mapasDisabledTrue)
+  console.log(mapasDisabledFalse)
 
   if (mapasDisabledFalse.length > 0) {
     const htmlMapas = mapasDisabledFalse.reduce((acc, curr) => {
