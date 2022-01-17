@@ -1,5 +1,5 @@
 #formulario-busqueda {
-  width: 80%;
+  width: 95%;
   height: 150px;
   margin-top: 30px;
   display: flex;
@@ -35,6 +35,8 @@ label{
     font-weight: 800;
     color: $gris;
     margin-right: 5px;
+    margin-left: 10px;
+
 
 }
 select{
@@ -50,7 +52,7 @@ select{
     }
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
   #formulario-busqueda {
     flex-wrap: wrap;
     align-items: flex-start;

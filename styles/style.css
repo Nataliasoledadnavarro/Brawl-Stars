@@ -661,7 +661,7 @@ footer .body-footer .column-footer h2 {
 }
 
 #formulario-busqueda {
-  width: 80%;
+  width: 95%;
   height: 150px;
   margin-top: 30px;
   display: flex;
@@ -708,6 +708,7 @@ footer .body-footer .column-footer h2 {
   font-weight: 800;
   color: #706f6f;
   margin-right: 5px;
+  margin-left: 10px;
 }
 .contenedor-select select {
   height: 30px;
@@ -716,6 +717,7 @@ footer .body-footer .column-footer h2 {
   color: red;
   border-bottom: solid 1px #706f6f;
   margin-right: 15px;
+  width: 100px;
 }
 
 @media screen and (max-width: 800px) {
@@ -735,7 +737,7 @@ footer .body-footer .column-footer h2 {
     background-image: linear-gradient(#d60000 0%, #fc3737 51%, #fa8e8e 100%);
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
   #formulario-busqueda {
     flex-wrap: wrap;
     align-items: flex-start;
@@ -1103,14 +1105,14 @@ footer .body-footer .column-footer h2 {
   width: 150px;
 }
 .seccion-mapas div .mapa p {
+  width: 90px;
+  position: absolute;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   background-color: rgba(0, 0, 0, 0.534);
   padding: 5px;
   border-radius: 2px;
   color: white;
-  position: absolute;
-  width: 90px;
   text-align: center;
 }
 .seccion-mapas div .mapa .img-mapa {
