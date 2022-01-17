@@ -23,56 +23,58 @@
     }
   }
 
-#formulario-busqueda {
-  #input-busqueda::placeholder {
-    color: $blanco;
-  }
-  .contenedor-select {
-    label {
+  #formulario-busqueda {
+    #input-busqueda::placeholder {
       color: $blanco;
     }
-    select {
-      color: rgb(184, 175, 175);
+    .contenedor-select {
+      label {
+        color: $blanco;
+      }
+      select {
+        color: rgb(184, 175, 175);
+      }
     }
   }
-}
-.tarjeta-brawler {
-  background-color: $blanco;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  h3 {
-    color: $negro;
+  .tarjeta-brawler {
+    background-color: $blanco;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    h3 {
+      color: $negro;
+    }
   }
-}
-#descripcion {
-  .contenedor-principal {
-    @include box-oscuro;
+  #descripcion {
+    .contenedor-principal {
+      @include box-oscuro;
+    }
+    #seccion-star-powers {
+      @include box-oscuro;
+    }
+    #seccion-gadgets {
+      @include box-oscuro;
+    }
+    #seccion-videos {
+      @include box-oscuro;
+    }
   }
-  #seccion-star-powers {
-    @include box-oscuro;
+  #seccion-modos-juego {
+    h2 {
+      color: $blanco;
+    }
   }
-  #seccion-gadgets {
-    @include box-oscuro;
+  .seccion-descripcion-modo {
+    h2 {
+      color: $blanco;
+    }
+    .descripcion-modo {
+      color: $blanco;
+    }
   }
-  #seccion-videos {
-    @include box-oscuro;
-  }
-}
-#seccion-modos-juego {
-  h2{color: $blanco;}
-}
-.seccion-descripcion-modo {
-  h2 {
-    color: $blanco;
-  }
-  .descripcion-modo {
-    color: $blanco;
-  }
-}
 
-footer {
-  background-color: transparent;
-  border-top: solid 2px $gris;
-}
+  footer {
+    background-color: transparent;
+    border-top: solid 2px $gris;
+  }
 }

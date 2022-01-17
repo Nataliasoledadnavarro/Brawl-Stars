@@ -19,21 +19,21 @@
 }
 
 @mixin boton-nav {
-width: 100%;
-background-color: $blanco;
-border: none;
-color:$negro;
-font-family: $font-titulo;
-font-size: 24px;
-margin: 5px;
-border-radius: 3px;
+  width: 100%;
+  background-color: $blanco;
+  border: none;
+  color: $negro;
+  font-family: $font-titulo;
+  font-size: 24px;
+  margin: 5px;
+  border-radius: 3px;
 }
 
 @mixin tag {
-  display: flex;
-  align-items: center;
   width: 120px;
   height: 40px;
+  display: flex;
+  align-items: center;
   border-radius: 10px;
   background-color: white;
   color: $negro;
@@ -55,10 +55,10 @@ border-radius: 3px;
 }
 
 @mixin tag-pequeño {
-  display: flex;
-  align-items: center;
   width: 100px;
   height: 35px;
+  display: flex;
+  align-items: center;
   border-radius: 10px;
   background-color: white;
   color: $negro;
@@ -91,7 +91,7 @@ border-radius: 3px;
   display: flex;
 }
 
-@mixin box-oscuro{
+@mixin box-oscuro {
   box-shadow: rgba(255, 255, 255, 0.336) 0px 5px 15px 0px;
   background-color: rgba(253, 251, 251, 0.808);
 }
@@ -103,17 +103,17 @@ border-radius: 3px;
   margin: 0%;
 }
 
-@mixin select{
-height: 30px;
-border: none;
-background-color: transparent;
-color: red;
-border-bottom: solid 1px $gris;
-margin-right: 15px;
-width: 100px;
+@mixin select {
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  color: red;
+  border-bottom: solid 1px $gris;
+  margin-right: 15px;
+  width: 100px;
 }
 
-@mixin item($textShadow:0px 0px 5px rgba(252, 227, 6, 0.46)){
+@mixin item($textShadow: 0px 0px 5px rgba(252, 227, 6, 0.46)) {
   flex-direction: column;
   h2 {
     @include h2-descripcion;
@@ -133,8 +133,8 @@ width: 100px;
         }
       }
       .nombre-item {
-        text-shadow: $textShadow;
         @include h2-descripcion;
+        text-shadow: $textShadow;
         font-size: 30px;
         letter-spacing: 0px;
         margin-top: 10px;
@@ -147,6 +147,4 @@ width: 100px;
       margin-top: 0%;
     }
   }
-    
-  
 }

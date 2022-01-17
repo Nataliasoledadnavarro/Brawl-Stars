@@ -28,7 +28,9 @@
 }
 .oscuro .tarjeta-brawler {
   background-color: white;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 .oscuro .tarjeta-brawler h3 {
   color: #312f2f;
@@ -81,21 +83,21 @@ li {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-image: url("../imagenes/fondo-claro.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center top;
   font-family: "Roboto", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 main {
-  background-color: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: transparent;
 }
 
 header {
@@ -186,7 +188,8 @@ nav .modal-menu .buttons-nav li button {
   width: 200px;
   margin: 20px;
   background-color: black;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 .tarjeta-brawler h3 {
   color: white;
@@ -215,7 +218,8 @@ nav .modal-menu .buttons-nav li button {
   margin-bottom: 20px;
   color: #312f2f;
   font-family: "Roboto", sans-serif;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   display: flex;
 }
 #descripcion .contenedor-img-principal-descripcion {
@@ -257,7 +261,8 @@ nav .modal-menu .buttons-nav li button {
   margin-bottom: 20px;
   color: #312f2f;
   font-family: "Roboto", sans-serif;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   display: flex;
   flex-direction: column;
 }
@@ -305,7 +310,8 @@ nav .modal-menu .buttons-nav li button {
   margin-bottom: 20px;
   color: #312f2f;
   font-family: "Roboto", sans-serif;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   display: flex;
   flex-direction: column;
 }
@@ -353,7 +359,8 @@ nav .modal-menu .buttons-nav li button {
   margin-bottom: 20px;
   color: #312f2f;
   font-family: "Roboto", sans-serif;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   display: flex;
   flex-direction: column;
 }
@@ -479,9 +486,9 @@ footer .body-footer .column-footer {
   margin-left: 30px;
 }
 footer .body-footer .column-footer h2 {
-  font-family: "Teko", sans-serif;
   letter-spacing: 2px;
   margin-bottom: 0%;
+  font-family: "Teko", sans-serif;
 }
 
 .colaboradores .tag {
@@ -496,7 +503,9 @@ footer .body-footer .column-footer h2 {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   font-weight: 800;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   margin-bottom: 10px;
 }
 .colaboradores .tag img {
@@ -533,10 +542,10 @@ footer .body-footer .column-footer h2 {
   color: #312f2f;
 }
 .footer-footer ul {
-  color: white;
   width: 40%;
   display: flex;
   align-items: center;
+  color: white;
   margin-left: 20px;
 }
 .footer-footer .tag {
@@ -551,7 +560,9 @@ footer .body-footer .column-footer h2 {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   font-weight: 800;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   margin-left: 15px;
 }
 .footer-footer .tag img {
@@ -564,7 +575,9 @@ footer .body-footer .column-footer h2 {
 }
 .footer-footer .tag img:hover {
   background: linear-gradient(#061efc 0%, #527ffc 51%, #9db2f8 100%);
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 @media screen and (max-width: 700px) {
@@ -592,7 +605,9 @@ footer .body-footer .column-footer h2 {
     font-size: 14px;
     font-family: "Roboto", sans-serif;
     font-weight: 800;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     margin-right: 15px;
   }
   footer .colaboradores .tag img {
@@ -621,7 +636,9 @@ footer .body-footer .column-footer h2 {
     font-size: 14px;
     font-family: "Roboto", sans-serif;
     font-weight: 800;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     margin-left: 0%;
     margin-top: 5px;
   }
@@ -664,10 +681,10 @@ footer .body-footer .column-footer h2 {
 #formulario-busqueda {
   width: 95%;
   height: 150px;
-  margin-top: 30px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 30px;
 }
 #formulario-busqueda #input-busqueda {
   width: 50%;
@@ -696,7 +713,9 @@ footer .body-footer .column-footer h2 {
 }
 #formulario-busqueda #boton-buscar:hover {
   background: linear-gradient(#061efc 0%, #527ffc 51%, #9db2f8 100%);
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .contenedor-select {
@@ -842,9 +861,9 @@ footer .body-footer .column-footer {
   margin-left: 30px;
 }
 footer .body-footer .column-footer h2 {
-  font-family: "Teko", sans-serif;
   letter-spacing: 2px;
   margin-bottom: 0%;
+  font-family: "Teko", sans-serif;
 }
 
 .colaboradores .tag {
@@ -859,7 +878,9 @@ footer .body-footer .column-footer h2 {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   font-weight: 800;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   margin-bottom: 10px;
 }
 .colaboradores .tag img {
@@ -896,10 +917,10 @@ footer .body-footer .column-footer h2 {
   color: #312f2f;
 }
 .footer-footer ul {
-  color: white;
   width: 40%;
   display: flex;
   align-items: center;
+  color: white;
   margin-left: 20px;
 }
 .footer-footer .tag {
@@ -914,7 +935,9 @@ footer .body-footer .column-footer h2 {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   font-weight: 800;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   margin-left: 15px;
 }
 .footer-footer .tag img {
@@ -927,7 +950,9 @@ footer .body-footer .column-footer h2 {
 }
 .footer-footer .tag img:hover {
   background: linear-gradient(#061efc 0%, #527ffc 51%, #9db2f8 100%);
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 @media screen and (max-width: 700px) {
@@ -955,7 +980,9 @@ footer .body-footer .column-footer h2 {
     font-size: 14px;
     font-family: "Roboto", sans-serif;
     font-weight: 800;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     margin-right: 15px;
   }
   footer .colaboradores .tag img {
@@ -984,7 +1011,9 @@ footer .body-footer .column-footer h2 {
     font-size: 14px;
     font-family: "Roboto", sans-serif;
     font-weight: 800;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     margin-left: 0%;
     margin-top: 5px;
   }
@@ -1051,7 +1080,8 @@ footer .body-footer .column-footer h2 {
   margin-bottom: 20px;
   color: #312f2f;
   font-family: "Roboto", sans-serif;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   display: flex;
   flex-direction: column;
   display: none;
@@ -1062,7 +1092,8 @@ footer .body-footer .column-footer h2 {
   color: #706f6f;
   margin: 10px 0px 0px 15px;
 }
-.seccion-descripcion-modo .descripcion-modo, .seccion-descripcion-modo .tutorial-modo {
+.seccion-descripcion-modo .descripcion-modo,
+.seccion-descripcion-modo .tutorial-modo {
   width: 95%;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
@@ -1138,7 +1169,8 @@ footer .body-footer .column-footer h2 {
     font-family: "Teko", sans-serif;
     font-size: 36px;
   }
-  .seccion-descripcion-modo .descripcion-modo, .seccion-descripcion-modo .tutorial-modo {
+  .seccion-descripcion-modo .descripcion-modo,
+  .seccion-descripcion-modo .tutorial-modo {
     font-size: 12px;
   }
   .seccion-descripcion-modo .contenedor-nombre-modo .contenedor-icono-modo {

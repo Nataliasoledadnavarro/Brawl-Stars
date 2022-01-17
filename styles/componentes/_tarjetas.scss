@@ -4,18 +4,17 @@
   background-color: black;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
-
   h3 {
     color: white;
     margin: 15px;
     font-weight: 600;
     font-family: $font-titulo;
     font-size: 32px;
-   letter-spacing:3px;
+    letter-spacing: 3px;
   }
 }
 
-.tarjeta-brawler :hover{ 
+.tarjeta-brawler :hover {
   transform: translateY(-15px);
-  transition: all 0.30s;
+  transition: all 0.3s;
 }

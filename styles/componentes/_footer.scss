@@ -12,11 +12,10 @@ footer {
     .column-footer {
       width: 40%;
       margin-left: 30px;
-
       h2 {
-        font-family: $font-titulo;
         letter-spacing: 2px;
         margin-bottom: 0%;
+        font-family: $font-titulo;
       }
     }
   }
@@ -55,10 +54,10 @@ footer {
   background-image: url("../imagenes/fondo.png");
   color: $negro;
   ul {
-    color: $blanco;
     width: 40%;
     display: flex;
     align-items: center;
+    color: $blanco;
     margin-left: 20px;
   }
   .tag {
@@ -72,9 +71,8 @@ footer {
 
 @media screen and (max-width: 700px) {
   footer {
-  .body-footer {
+    .body-footer {
       flex-direction: column;
-
       .column-footer {
         width: 80%;
         display: flex;
@@ -91,8 +89,8 @@ footer {
     }
     .footer-footer {
       ul {
-       width: 100%;
-       flex-direction: column;
+        width: 100%;
+        flex-direction: column;
         align-items: center;
         font-size: 14px;
         .tag {
