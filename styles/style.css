@@ -533,6 +533,7 @@ footer .body-footer .column-footer h2 {
   color: #312f2f;
 }
 .footer-footer ul {
+  color: white;
   width: 40%;
   display: flex;
   align-items: center;
@@ -605,7 +606,7 @@ footer .body-footer .column-footer h2 {
   footer .footer-footer ul {
     width: 100%;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     font-size: 14px;
   }
   footer .footer-footer ul .tag {
@@ -895,6 +896,7 @@ footer .body-footer .column-footer h2 {
   color: #312f2f;
 }
 .footer-footer ul {
+  color: white;
   width: 40%;
   display: flex;
   align-items: center;
@@ -967,7 +969,7 @@ footer .body-footer .column-footer h2 {
   footer .footer-footer ul {
     width: 100%;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     font-size: 14px;
   }
   footer .footer-footer ul .tag {
