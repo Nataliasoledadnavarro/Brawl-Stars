@@ -1,11 +1,10 @@
 #seccion-modos-juego {
   width: 60%;
-  max-width: $max-whidth;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
+  max-width: $max-whidth;
   h2 {
     font-family: $font-titulo;
     font-size: 42px;
@@ -53,7 +52,8 @@
     color: $gris;
     margin: 10px 0px 0px 15px;
   }
-  .descripcion-modo, .tutorial-modo {
+  .descripcion-modo,
+  .tutorial-modo {
     width: 95%;
     font-family: $font-textos-generales;
     font-size: 18px;
@@ -132,7 +132,8 @@
       font-family: $font-titulo;
       font-size: 36px;
     }
-    .descripcion-modo, .tutorial-modo {
+    .descripcion-modo,
+    .tutorial-modo {
       font-size: 12px;
     }
     .contenedor-nombre-modo {

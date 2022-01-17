@@ -1,11 +1,11 @@
 nav {
   width: 100%;
-  max-width: $max-whidth;
-  height: 80px;
-  background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: $max-whidth;
+  height: 80px;
+  background-color: transparent;
   border-bottom: solid 1px $gris;
   .logo {
     width: 120px;
@@ -16,22 +16,22 @@ nav {
   img {
     width: 100%;
   }
-  .boton-hamburguesa{
+  .boton-hamburguesa {
     width: 40px;
     height: 40px;
     border: none;
     background-color: transparent;
     margin-right: 15px;
-    i{
+    i {
       color: $gris;
-     font-size: 24px;
+      font-size: 24px;
     }
   }
 
   .modal-menu {
-    display: none;
     width: 200px;
     height: 100%;
+    display: none;
     background-color: rgba(255, 255, 255, 0.753);
     position: fixed;
     top: 0px;

@@ -1,11 +1,10 @@
 #formulario-busqueda {
   width: 95%;
   height: 150px;
-  margin-top: 30px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-
+  margin-top: 30px;
   #input-busqueda {
     width: 50%;
     height: 30px;
@@ -26,22 +25,20 @@
     @include boton-hover;
   }
 }
-.contenedor-select{
-  display:flex;
+.contenedor-select {
+  display: flex;
   justify-content: space-around;
-label{
-  font-family: $font-textos-generales;
+  label {
+    font-family: $font-textos-generales;
     font-size: 16px;
     font-weight: 800;
     color: $gris;
     margin-right: 5px;
     margin-left: 10px;
-
-
-}
-select{
-  @include select;
-}
+  }
+  select {
+    @include select;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -70,10 +67,11 @@ select{
 
 @media screen and (max-width: 400px) {
   #formulario-busqueda {
-  #input-busqueda::placeholder {
-   font-size: 10px;
+    #input-busqueda::placeholder {
+      font-size: 10px;
+    }
+    label {
+      font-size: 12px;
+    }
+  }
 }
-label{font-size: 12px;}
-}
-}
-

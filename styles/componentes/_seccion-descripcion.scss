@@ -2,11 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
   .contenedor-principal {
     @include box;
   }
-
   .contenedor-img-principal-descripcion {
     width: 180px;
     overflow: hidden;
@@ -15,7 +13,6 @@
       width: 100%;
     }
   }
-
   .info-principal-descripcion {
     width: 70%;
     display: flex;
