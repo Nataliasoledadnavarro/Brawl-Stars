@@ -377,6 +377,8 @@ const mostrarVideos = (personaje) => {
       );
     }, "");
     contenedorVideos.innerHTML = html;
+  } else{
+    seccionVideos.style.display = "none";
   }
 };
 
