@@ -14,6 +14,7 @@
   }
 }
 
+// no dejes espacio entre selector y la pseudo clase
 .tarjeta-brawler :hover {
   transform: translateY(-15px);
   transition: all 0.3s;
