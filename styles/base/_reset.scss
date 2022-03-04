@@ -1,37 +1,16 @@
-
-// Ojo con la prolijidad acá, este archivo esta dificil de leer. 
-// Atencion al tabulado y a dejar espacio entre selectores y llaves. Tambien chequea los saltos de linea. 
-// Deberia ser:
-// body {
-//     margin: 0;
-//     box-sizing: border-box;
-// }
-
-// a {
-//     text-decoration: none;
-// }
-    
-// ul {
-//     padding: 0%;
-// }
-    
-// li {
-//     list-style:none;
-// }
-
-body{margin: 0;
-box-sizing: border-box;
-}
-a{
-    text-decoration: none;
+body {
+  margin: 0;
+  box-sizing: border-box;
 }
 
-ul{
-    padding: 0%;
+a {
+  text-decoration: none;
 }
 
-li{
-    list-style:none;
+ul {
+  padding: 0%;
 }
 
-
+li {
+  list-style: none;
+}

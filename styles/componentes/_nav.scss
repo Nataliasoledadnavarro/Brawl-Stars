@@ -3,7 +3,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: $max-whidth;
+  max-width: $max-width;
   height: 80px;
   background-color: transparent;
   border-bottom: solid 1px $gris;
@@ -34,6 +34,7 @@ nav {
     display: none;
     background-color: rgba(255, 255, 255, 0.753);
     position: fixed;
+    z-index: 1;
     top: 0px;
     right: 0px;
     overflow: hidden;
