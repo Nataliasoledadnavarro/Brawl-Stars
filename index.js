@@ -29,6 +29,7 @@ const botonUltimaPagina = document.getElementById("boton-ultima-pagina");
 
 // Busqueda
 const inputBusqueda = document.getElementById("input-busqueda");
+// nunca usas esta variable 
 const botonBuscar = document.getElementById("boton-buscar");
 const seccionBusqueda = document.getElementById("seccion-busqueda");
 const formularioBusqueda = document.getElementById("formulario-busqueda");
@@ -41,6 +42,7 @@ const botonCerrarModal = document.getElementById("cerrar-modal");
 
 //Sección descripción.
 const seccionDescripcion = document.getElementById("descripcion");
+// nunca usas esta variable 
 const contenedorImagenPrincipalDescripcion = document.querySelector(
   ".contenedor-img-principal-descripcion"
 );
@@ -102,6 +104,7 @@ const arraySecciones = [
 ];
 
 const mostrarSeccion = (array, seccion) => {
+  // amo esta funcion! 
   for (let i = 0; i < array.length; i++) {
     if (array[i] != seccion) {
       array[i].style.display = "none";
@@ -124,6 +127,7 @@ cerrarModalNav.onclick = () => {
   botonHamburguesa.style.display = "block";
 };
 botonNavBrawlers.onclick = (e) => {
+  // no es necesario prevenir el default aca, eso solo para formularios
   e.preventDefault();
   header.style.display = "block";
   nav.style.display = "flex";
@@ -162,6 +166,7 @@ let paginaActual = 0;
 let ultimaPagina = 0;
 
 const agruparBrawlers = (data) => {
+  // excelente esta funcion
   let contadora = 0;
   const matriz = [];
   for (let i = 0; i < data.list.length; i++) {
@@ -177,6 +182,8 @@ const agruparBrawlers = (data) => {
 
 const tarjetasBrawlersHtml = (matrizBrawlers, pagina) => {
   const brawlers = matrizBrawlers[pagina];
+  // aca podés usar retorno implicito
+  // const html = brawlers.reduce((acc, curr) => acc +
   const html = brawlers.reduce((acc, curr) => {
     return (
       acc +
@@ -197,6 +204,7 @@ botonPrimeraPagina.onclick = () => {
 
 botonPaginaAnterior.onclick = () => {
   iconoProximaPagina.style.color = "white";
+  // if (!paginaActual)
   if (paginaActual === 0) {
     iconoPaginaAnterior.style.color = "grey";
     botonPaginaAnterior.disabled = true;
@@ -254,6 +262,7 @@ const mostrarBusqueda = () => {
         resultado = busqueda8Bit[0];
       }
 
+      // if (resultado)
       if (resultado != undefined) {
         const mostrarRestultado = `<article class="tarjeta-brawler" data-id=${resultado.id}>
       <img src="${resultado.imageUrl}" alt="Imagen del brawler ${resultado.name}">
@@ -264,6 +273,7 @@ const mostrarBusqueda = () => {
         inputBusqueda.value = "";
         traerBrawler();
       }
+      // else, o if (!resultado)
       if (resultado === undefined) {
         contenedorModalBusqueda.style.display = "flex";
       }
@@ -289,6 +299,10 @@ const traerBrawler = () => {
 
   for (let i = 0; i < tarjetas.length; i++) {
     tarjetas[i].onclick = () => {
+      // const id, no modificas la variable en ningun momento. Number(id) no modifica la variable, 
+      // sino que retorna la variable convertida en numero:
+      // const idANumero = Number(id)
+      // De todos modos no es necesario porque si lo usas en la URL, queres que sea un string
       let id = tarjetas[i].dataset.id;
       Number(id);
       fetch(`https://api.brawlapi.com/v1/brawlers/${id}`)
@@ -394,6 +408,7 @@ const filtrarRarity = (data, value) => {
     tarjetasBrawlersHtml(agruparBrawlers(data), paginaActual);
     seccionPaginado.style.display = "flex";
   } else {
+    // no es necesario declarar ni index ni data 
     const arrayFiltrado = data.list.filter((personaje, index, data) => {
       return personaje.rarity.name === value;
     });
@@ -530,6 +545,7 @@ const traerMapas = (dataModo) => {
 };
 
 const mostrarMapas = (mapas, modo) => {
+  // excelente
   const mapasDisabledTrue = mapas.list.filter((mapa) => {
     return modo.id === mapa.gameMode.id && mapa.disabled === true;
   });
@@ -540,6 +556,8 @@ const mostrarMapas = (mapas, modo) => {
 
   if (mapasDisabledFalse.length > 0) {
     const htmlMapas = mapasDisabledFalse.reduce((acc, curr) => {
+      // en un reduce retornás el nuevo valor de la acc, acá estas retornando 
+      // la asignacion de un nuevo valor. Sacá el acc = 
       return (acc =
         acc +
         ` <div class="mapa">
