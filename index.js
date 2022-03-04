@@ -29,8 +29,6 @@ const botonUltimaPagina = document.getElementById("boton-ultima-pagina");
 
 // Busqueda
 const inputBusqueda = document.getElementById("input-busqueda");
-// nunca usas esta variable 
-const botonBuscar = document.getElementById("boton-buscar");
 const seccionBusqueda = document.getElementById("seccion-busqueda");
 const formularioBusqueda = document.getElementById("formulario-busqueda");
 const selectRarity = document.getElementById("select-rarity");
@@ -42,10 +40,6 @@ const botonCerrarModal = document.getElementById("cerrar-modal");
 
 //Sección descripción.
 const seccionDescripcion = document.getElementById("descripcion");
-// nunca usas esta variable 
-const contenedorImagenPrincipalDescripcion = document.querySelector(
-  ".contenedor-img-principal-descripcion"
-);
 const imagenPrincipalDescripcion = document.querySelector(
   ".img-principal-descripcion"
 );
@@ -126,14 +120,12 @@ cerrarModalNav.onclick = () => {
   modalNav.style.display = "none";
   botonHamburguesa.style.display = "block";
 };
-botonNavBrawlers.onclick = (e) => {
-  // no es necesario prevenir el default aca, eso solo para formularios
-  e.preventDefault();
+botonNavBrawlers.onclick = () => {
   header.style.display = "block";
   nav.style.display = "flex";
   formularioBusqueda.style.display = "flex";
   mostrarSeccion(arraySecciones, seccionPrincipal);
-};
+}
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                             MODO CLARO/OSCURO
@@ -182,17 +174,13 @@ const agruparBrawlers = (data) => {
 
 const tarjetasBrawlersHtml = (matrizBrawlers, pagina) => {
   const brawlers = matrizBrawlers[pagina];
-  // aca podés usar retorno implicito
-  // const html = brawlers.reduce((acc, curr) => acc +
-  const html = brawlers.reduce((acc, curr) => {
-    return (
-      acc +
-      `<article class="tarjeta-brawler" data-id=${curr.id}>
+  const html = brawlers.reduce((acc, curr) => acc +
+    `<article class="tarjeta-brawler" data-id=${curr.id}>
         <img src="${curr.imageUrl}" alt="Imagen del brawler ${curr.name}">
           <h3>${curr.name}</h3>
       </article>`
-    );
-  }, "");
+
+    , "");
 
   contenedorBrawlers.innerHTML = html;
 };
@@ -204,8 +192,7 @@ botonPrimeraPagina.onclick = () => {
 
 botonPaginaAnterior.onclick = () => {
   iconoProximaPagina.style.color = "white";
-  // if (!paginaActual)
-  if (paginaActual === 0) {
+  if (!paginaActual) {
     iconoPaginaAnterior.style.color = "grey";
     botonPaginaAnterior.disabled = true;
   } else {
@@ -262,8 +249,7 @@ const mostrarBusqueda = () => {
         resultado = busqueda8Bit[0];
       }
 
-      // if (resultado)
-      if (resultado != undefined) {
+      if (resultado) {
         const mostrarRestultado = `<article class="tarjeta-brawler" data-id=${resultado.id}>
       <img src="${resultado.imageUrl}" alt="Imagen del brawler ${resultado.name}">
       <h3>${resultado.name}</h3>
@@ -273,8 +259,7 @@ const mostrarBusqueda = () => {
         inputBusqueda.value = "";
         traerBrawler();
       }
-      // else, o if (!resultado)
-      if (resultado === undefined) {
+      if (!resultado) {
         contenedorModalBusqueda.style.display = "flex";
       }
     });
@@ -299,12 +284,7 @@ const traerBrawler = () => {
 
   for (let i = 0; i < tarjetas.length; i++) {
     tarjetas[i].onclick = () => {
-      // const id, no modificas la variable en ningun momento. Number(id) no modifica la variable, 
-      // sino que retorna la variable convertida en numero:
-      // const idANumero = Number(id)
-      // De todos modos no es necesario porque si lo usas en la URL, queres que sea un string
       let id = tarjetas[i].dataset.id;
-      Number(id);
       fetch(`https://api.brawlapi.com/v1/brawlers/${id}`)
         .then((res) => res.json())
         .then((data) => {
@@ -408,8 +388,7 @@ const filtrarRarity = (data, value) => {
     tarjetasBrawlersHtml(agruparBrawlers(data), paginaActual);
     seccionPaginado.style.display = "flex";
   } else {
-    // no es necesario declarar ni index ni data 
-    const arrayFiltrado = data.list.filter((personaje, index, data) => {
+    const arrayFiltrado = data.list.filter((personaje) => {
       return personaje.rarity.name === value;
     });
     const html = arrayFiltrado.reduce((acc, curr) => {
@@ -425,7 +404,6 @@ const filtrarRarity = (data, value) => {
     contenedorBrawlers.innerHTML = html;
     seccionPaginado.style.display = "none";
   }
-  //ordenar(data, selectOrden.value);
 };
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -556,10 +534,7 @@ const mostrarMapas = (mapas, modo) => {
 
   if (mapasDisabledFalse.length > 0) {
     const htmlMapas = mapasDisabledFalse.reduce((acc, curr) => {
-      // en un reduce retornás el nuevo valor de la acc, acá estas retornando 
-      // la asignacion de un nuevo valor. Sacá el acc = 
-      return (acc =
-        acc +
+      return (acc +
         ` <div class="mapa">
         <p>${curr.name}</p>
         <div class="img-mapa">

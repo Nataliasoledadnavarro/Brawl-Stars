@@ -24,6 +24,9 @@
   }
 
   #formulario-busqueda {
+    #input-busqueda {
+      color: white;
+    }
     #input-busqueda::placeholder {
       color: $blanco;
     }
